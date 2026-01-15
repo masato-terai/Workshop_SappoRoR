@@ -1,0 +1,21 @@
+---
+title: "Untitled"
+author: "寺井雅人（愛知工科大学）"
+format: html
+---
+
+# 講師プロフィール
+
+# Positronとは
+
+# R Studioとの違い
+
+# R Studioから乗り換えるべき？？
+
+# Positronを開いてみよう
+
+## インストール
+
+## R Studioとの違い
+
+# 最後に
