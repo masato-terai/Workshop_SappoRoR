@@ -1,21 +1,227 @@
 ---
-title: "Untitled"
+title: "Positron入門!"
 author: "寺井雅人（愛知工科大学）"
-format: html
+format: revealjs
+title-slide-attributes:
+    data-background-image: title_image.png
+    data-background-size: contain
+    data-background-opacity: "0.2"
 ---
+
+# 追加したいこと
+
+- レイアウトをもっとオシャレにしたい
+
+- ページ番号を挿入
 
 # 講師プロフィール
 
+- 大学教員
+
+- Rの使用は、データの成形、分析が主
+
+    - 昨夏くらいからPositronへ移行
+
+- 北海道は31年の人生で初
+
+# 今日の内容
+
+- Rをメインで使用している方
+
+- パッケージ開発というより、データ分析などを主な用途としている方
+
+- AIアシストやrenv、コマンドラインGitは触れない
+
+    - AIアシストのおすすめ記事：[Positron Assistant: データサイエンティスト向けのAIアシスタント機能](https://zenn.dev/uribo/articles/7dbc83e4bbfcc0)
+
 # Positronとは
 
-# R Studioとの違い
+- RとPythonを"First-class"言語とするVS codeに似ている統合開発環境
 
-# R Studioから乗り換えるべき？？
+## R Studioから乗り換えるべき？？
 
-# Positronを開いてみよう
+- RStudioが消えるわけではない（開発が止まったりするわけではない）
+    
+    - Positronよりも、RStudio（10年以上の歴史）の方がより安定したソフトウェア
 
-## インストール
+- R, RStudioにこれから触れる人は、Positronがお勧めらしい
 
-## R Studioとの違い
+    - 既にRStudioをガンガン使っていて、満足しているならRStudioのままでOK!
+
+## こんな人にお勧めかも（by 公式）
+- VS Code を使ってデータ分析（Python や R）をしているが、試しにコードを動かしたり、変数やデータを中身まで確認したり、グラフを操作したり、Shiny・Streamlit・FastAPI のようなデータアプリを作ったりするには、もう少し専用の便利機能がほしい人。
+
+- JupyterLab やオンラインのノートブック環境でデータ分析（Python や R）をしていて、ノートブックは使い続けたいが、もっと高機能で本格的な IDE を使いたい人。
+
+- **RStudio を使っていて、IDE をもっと自分好みにカスタマイズしたり、機能を拡張したりしたい人。**
+
+- Python や R だけでなく、Rust、C++、JavaScript、Lua などの言語も使って日常的にデータ分析やパッケージ開発をしている人。
+
+- データ分析に特化した強力な AI 機能を、モダンで拡張性の高い IDE の中で使いたい人。
+
+## **RStudio を使っていて、IDE をもっと自分好みにカスタマイズしたり、機能を拡張したりしたい人。**
+
+- カスタマイズ
+
+- 機能を拡張
+
+    - 拡張機能
+
+    - Gitコマンド
+
+    - AIアシスト
+
+## こんな人にお勧めかも（by 寺井）
+- RStudioでRを触り始めた人
+
+## こんな人にお勧め**しない**かも（by 寺井）
+
+- 画面に様々な機能が表示されている
+
+- RStudioに慣れかけ始めた人
+
+# RStudioとの主な違い
+- Rprojがない！
+
+    - フォルダ = プロジェクト
+
+    - 詳しい解説：[The Rproj File](https://positron.posit.co/migrate-rstudio-rproj.html)
+
+- RMarkdown、Quartoの書き出しが可能だが、いわゆる"Knit"ボタンがない
+
+    - qmdファイルの場合、"Preview"や"Render on Save"で書きだす
+
+    - Rmdファイルの場合、"Preview"に、"Render Document With R Markdown"が表示される
+
+- 現時点では、RStudioとは異なり、実行結果は、コンソールペインでしか確認できない
+
+    ```However, we are actively enhancing our Positron-native notebook UI that will provide inline outputs for Python or R sessions.```
+
+- Rがクラッシュしても、Positron自体は生き残ることが多い
+
+- バージョンの切り替えも、コンソールの再起動だけでよい
+
+
+## つまり
+
+- RStudioの機能をそのままに、新たな機能を拡張したわけではない
+
+- RStudioにしかない機能もあったりする
+
+# とりあえず触ってみよう
+
+## Positronのインストール
+
+- R Version 4.2以上が必要のようです
+
+- それぞれのOSに合うインストーラーを選ぶ
+
+    - [リンク](https://positron.posit.co/install.html)
+
+## UIの外観
+
+- 画面構成：Editor, Console, Plots, Files
+
+## レイアウトの指定
+
+- Stacked Layout:デフォルト
+
+- Side-By-Side Layout：コンソールをソースペインの右にもっていきたい人へお勧め
+
+- Notebook Layout
+
+- Assistant Layout
+
+
+## 便利なデータの確認機能
+
+- ```mtcars```の中身をVARIABLESで確認
+
+    - データの分布や、欠損値の割合なども確認できる
+
+```{markdown}
+dat <- mtcars
+```
+
+## 作成した図を確認可能
+
+```{markdown}
+plot(dat$mpg)
+boxplot(dat$mpg, dat$cyl)
+```
+
+## Git操作
+- サイドバーの上から3つ目がGit操作
+
+    - RStudioに比べ、クリック操作で行えるコマンドがかなり増えた
+
+    - GitHubとの連携もより簡単に（なった気がする）
+
+## テーマ・フォントの変更
+- テーマの変更：左下の⚙をクリック → [Themes] → [Color Theme]
+
+    - RStudioよりも選択肢が少ない
+
+- フォントの大きさの変更：左下の⚙をクリック → [Settings] → [Text Editor] → [Font Size]
+
+# R MarkdownとQuarto
+
+## 概要
+
+- ```Quarto is a multi-language, next generation version of R Markdown from RStudio, with many new features and capabilities.```
+
+    - 様々なプログラム言語に対応（e.g., R、Python、Julia）
+
+- PositronとQuarto、RStudioとR Markdown
+
+    - R MarkdownはRStudio内で完結するのが快適。QuartoはVSコードやJupyter、PositronでもOK!
+
+- Rしか使わないのであれば、R MarkdownのままでOK！
+
+    - チャンクの書き方など微妙に違いはあるが、比較的スムーズに移行できるので、お勧めします！
+
+# 小ネタ
+- ミニマップ機能（全体を俯瞰）
+
+    - スクロールバーで右クリック → [Minimap]
+
+- Airでコードを綺麗に成形
+
+    - Positronに既に備わっているExtensions
 
 # 最後に
+
+## お勧めな理由
+
+### 1. 
+
+### 2. データ分析の便利な昨日
+
+- データの分布を一覧で出せる
+
+### 3. 
+
+- Gitが使いやすい。RStudioよりGUI操作の選択肢が多い
+
+- Githubとの連携が楽
+
+## わさもん
+- 熊本弁：新しいもの好き
+
+    - あん人はわさもんたい（あの人は新しいもの好きだね）
+
+## Positronに移行しないとだめ！とは思わない
+
+- 好きなエディターでOK！
+
+- 個人的に使っている理由として、
+
+    - Positronの将来に賭けている
+    
+    - アーリーアダプター（Positron、Quarto）になりたい
+
+    - データの外観機能が気に入っている
+
+    - Pythonももっと触っていきたい
+
+# 参考資料
