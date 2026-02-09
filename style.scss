@@ -1,0 +1,71 @@
+/*-- scss:defaults --*/
+
+/* RStudio / Positron inspired blues */
+$theme-bg: #F7F9FC;          // 明るいグレーブルー背景
+$theme-panel: #E9EEF5;       // コード背景・パネル
+$theme-blue: #2C7BE5;        // メインブルー
+$theme-darkblue: #1F4E79;    // 見出し・強調
+$theme-accent: #5C9DED;      // サブアクセント
+$theme-text: #2F3B4A;        // 本文
+$theme-muted: #6B7C93;       // フッター・補足
+
+$body-bg: $theme-bg;
+$body-color: $theme-text;
+$link-color: $theme-blue;
+
+$code-block-font-size: 1em;
+
+
+/*-- scss:rules --*/
+
+/* 強調（旧 orange / red の置き換え） */
+.blue {
+  color: $theme-blue;
+  font-weight: bold;
+}
+
+.darkblue {
+  color: $theme-darkblue;
+  font-weight: bold;
+}
+
+/* コードブロック */
+.reveal pre code {
+  max-height: 1000px;
+}
+
+.reveal div.sourceCode pre code {
+  background-color: $theme-panel;
+  border-left: 4px solid $theme-blue;
+}
+
+/* タイトルスライド */
+.reveal .title {
+  background-color: $theme-darkblue;
+  color: #FFFFFF;
+  letter-spacing: 0.04em;
+}
+
+/* フッター */
+.reveal .footer {
+  color: $theme-muted;
+  font-size: 0.8em;
+}
+
+/* 中央寄せ（必要なときだけ使う） */
+.textcenter {
+  text-align: center;
+}
+
+/* 本文 */
+.reveal {
+  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* 見出しだけ少し引き締める */
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}

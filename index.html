@@ -95,10 +95,12 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-437f0adb367fd273ddcce56150f6012e.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -192,8 +194,9 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="title_image.png" data-background-opacity="0.2" data-background-size="contain" class="quarto-title-block center">
+<section id="title-slide" data-background-image="title_image.png" data-background-opacity="0.15" data-background-size="contain" class="quarto-title-block center">
   <h1 class="title">Positron入門!</h1>
+  <p class="subtitle">Rユーザーのための次世代IDE</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -207,28 +210,34 @@
 <section id="追加したいこと" class="title-slide slide level1 center">
 <h1>追加したいこと</h1>
 <ul>
-<li><p>レイアウトをもっとオシャレにしたい</p></li>
-<li><p>ページ番号を挿入</p></li>
+<li>RStudioとPositronのレイアウトの違いを、図で作成してみる</li>
 </ul>
 </section>
 
 <section id="講師プロフィール" class="title-slide slide level1 center">
 <h1>講師プロフィール</h1>
 <ul>
-<li><p>大学教員</p></li>
+<li><p>大学教員（助教）</p></li>
 <li><p>Rの使用は、データの成形、分析が主</p>
 <ul>
-<li>昨夏くらいからPositronへ移行</li>
+<li>昨夏くらいからRStudioからPositronへ完全移行</li>
 </ul></li>
 <li><p>北海道は31年の人生で初</p></li>
 </ul>
 </section>
 
-<section id="今日の内容" class="title-slide slide level1 center">
-<h1>今日の内容</h1>
+<section id="想定している聴衆の方" class="title-slide slide level1 center">
+<h1>想定している聴衆の方</h1>
 <ul>
-<li><p>Rをメインで使用している方</p></li>
+<li><p>Rをメインで使うもしくはR時々Pythonの方</p></li>
 <li><p>パッケージ開発というより、データ分析などを主な用途としている方</p></li>
+</ul>
+</section>
+
+<section id="今回の内容" class="title-slide slide level1 center">
+<h1>今回の内容</h1>
+<ul>
+<li><p>後で目次を挿入</p></li>
 <li><p>AIアシストやrenv、コマンドラインGitは触れない</p>
 <ul>
 <li>AIアシストのおすすめ記事：<a href="https://zenn.dev/uribo/articles/7dbc83e4bbfcc0">Positron Assistant: データサイエンティスト向けのAIアシスタント機能</a></li>
@@ -240,11 +249,14 @@
 <section id="positronとは" class="title-slide slide level1 center">
 <h1>Positronとは</h1>
 <ul>
-<li>RとPythonを”First-class”言語とするVS codeに似ている統合開発環境</li>
+<li><p>RとPythonを”First-class”言語とするVisual Studio Codeに似ている統合開発環境</p>
+<ul>
+<li>Posit社（RStudioを開発した）が開発中の<strong>次世代</strong>統合開発環境</li>
+</ul></li>
 </ul>
 </section>
-<section id="r-studioから乗り換えるべき" class="slide level2">
-<h2>R Studioから乗り換えるべき？？</h2>
+<section id="rstudioから乗り換えるべき" class="slide level2">
+<h2>RStudioから乗り換えるべき？？</h2>
 <ul>
 <li><p>RStudioが消えるわけではない（開発が止まったりするわけではない）</p>
 <ul>
@@ -291,7 +303,6 @@
 <li><p>RStudioに慣れかけ始めた人</p></li>
 </ul>
 </section></section>
-<section>
 <section id="rstudioとの主な違い" class="title-slide slide level1 center">
 <h1>RStudioとの主な違い</h1>
 <ul>
@@ -311,13 +322,43 @@
 <li><p>バージョンの切り替えも、コンソールの再起動だけでよい</p></li>
 </ul>
 </section>
-<section id="つまり" class="slide level2">
-<h2>つまり</h2>
+
+<section id="search-bar" class="title-slide slide level1 center">
+<h1>Search Bar</h1>
+
+</section>
+
+<section id="ai-powered-data-science" class="title-slide slide level1 center">
+<h1>AI-Powered Data Science</h1>
 <ul>
-<li><p>RStudioの機能をそのままに、新たな機能を拡張したわけではない</p></li>
-<li><p>RStudioにしかない機能もあったりする</p></li>
+<li><p>Positronは、RStudioに比べ、より多くのAIサポートを受けることができる</p>
+<ul>
+<li><p><strong>Databot</strong>機能など、ノーコードでの分析が可能に</p>
+<ul>
+<li><a href="https://youtu.be/TrN-FMcOsOA?si=2YYNA2_Lv35QXwyD">公式Youtube（英語）</a></li>
+</ul></li>
+</ul></li>
 </ul>
-</section></section>
+</section>
+
+<section id="つまり" class="title-slide slide level1 center">
+<h1>つまり</h1>
+<ul>
+<li><p>RStudioの機能をそのままに、新たな機能を拡張したわけではない</p>
+<ul>
+<li>RStudioにしかない機能もあったりする</li>
+</ul></li>
+<li><p>RStudio: Rに特化した完成度の高い開発環境</p>
+<ul>
+<li>RだけならRStudio</li>
+</ul></li>
+<li><p>Positron：多言語の将来性のある開発環境</p>
+<ul>
+<li>R + Python、今後は多言語もならPositron</li>
+</ul></li>
+</ul>
+</section>
+
 <section>
 <section id="とりあえず触ってみよう" class="title-slide slide level1 center">
 <h1>とりあえず触ってみよう</h1>
@@ -326,7 +367,10 @@
 <section id="positronのインストール" class="slide level2">
 <h2>Positronのインストール</h2>
 <ul>
-<li><p>R Version 4.2以上が必要のようです</p></li>
+<li><p>Rのインストールも忘れないように！</p>
+<ul>
+<li>R バージョン 4.2以上が必要</li>
+</ul></li>
 <li><p>それぞれのOSに合うインストーラーを選ぶ</p>
 <ul>
 <li><a href="https://positron.posit.co/install.html">リンク</a></li>
@@ -339,11 +383,15 @@
 <li>画面構成：Editor, Console, Plots, Files</li>
 </ul>
 </section>
+<section id="レイアウト" class="slide level2">
+<h2>レイアウト</h2>
+
+<img data-src="https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg" class="r-stretch quarto-figure-center"><p class="caption">from https://positron.posit.co/</p></section>
 <section id="レイアウトの指定" class="slide level2">
 <h2>レイアウトの指定</h2>
 <ul>
 <li><p>Stacked Layout:デフォルト</p></li>
-<li><p>Side-By-Side Layout：コンソールをソースペインの右にもっていきたい人へお勧め</p></li>
+<li><p>Side-By-Side Layout：RStudioにより近い</p></li>
 <li><p>Notebook Layout</p></li>
 <li><p>Assistant Layout</p></li>
 </ul>
@@ -368,7 +416,7 @@
 <ul>
 <li><p>サイドバーの上から3つ目がGit操作</p>
 <ul>
-<li><p>RStudioに比べ、クリック操作で行えるコマンドがかなり増えた</p></li>
+<li><p>RStudioに比べ、クリック操作で行えるコマンドがかなり増えた（VS Codeより）</p></li>
 <li><p>GitHubとの連携もより簡単に（なった気がする）</p></li>
 </ul></li>
 </ul>
@@ -420,21 +468,44 @@
 </section>
 
 <section>
-<section id="最後に" class="title-slide slide level1 center">
-<h1>最後に</h1>
+<section id="まとめ" class="title-slide slide level1 center">
+<h1>まとめ</h1>
 
 </section>
-<section id="お勧めな理由" class="slide level2">
-<h2>お勧めな理由</h2>
-<h3 id="section">1.</h3>
-<h3 id="データ分析の便利な昨日">2. データ分析の便利な昨日</h3>
+<section id="positronがお勧めな理由" class="slide level2">
+<h2>Positronがお勧めな理由</h2>
+<h3 id="データ分析のための補助機能">1. データ分析のための補助機能</h3>
 <ul>
 <li>データの分布を一覧で出せる</li>
 </ul>
-<h3 id="section-1">3.</h3>
+</section>
+<section id="positronがお勧めな理由-1" class="slide level2">
+<h2>Positronがお勧めな理由</h2>
+<h3 id="git操作がより簡単に">2. Git操作がより簡単に</h3>
 <ul>
 <li><p>Gitが使いやすい。RStudioよりGUI操作の選択肢が多い</p></li>
 <li><p>Githubとの連携が楽</p></li>
+<li><p>GitやGithubをこれから勉強したい方へ</p>
+<ul>
+<li><p><a href="https://www.jstage.jst.go.jp/article/methodologysig/17/0/17_17.3/_article/-char/ja/">RStudioとGitの連携によるバージョン管理</a></p></li>
+<li><p><a href="https://www.jstage.jst.go.jp/article/methodologysig/18/0/18_18.2/_article/-char/ja/">RStudio ユーザーのための GitHub 入門</a></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="positronがお勧めな理由-2" class="slide level2">
+<h2>Positronがお勧めな理由</h2>
+<h3 id="aiのアシストをより受けられる">3. AIのアシストをより受けられる</h3>
+<ul>
+<li><p>Databot機能などを活用すればほぼノーコードで分析が可能</p></li>
+<li><p>個人情報などの管理などには気を付けて！</p></li>
+</ul>
+</section>
+<section id="positronがお勧めでない理由" class="slide level2">
+<h2>Positronがお勧めでない理由</h2>
+<ul>
+<li><p>RStudioに比べるとまだ不安定</p></li>
+<li><p>RStudioに慣れた人は最初戸惑うかも</p></li>
+<li><p>R言語だけならRStudioで十分</p></li>
 </ul>
 </section>
 <section id="わさもん" class="slide level2">
@@ -449,24 +520,26 @@
 <section id="positronに移行しないとだめとは思わない" class="slide level2">
 <h2>Positronに移行しないとだめ！とは思わない</h2>
 <ul>
-<li><p>好きなエディターでOK！</p></li>
 <li><p>個人的に使っている理由として、</p>
 <ul>
 <li><p>Positronの将来に賭けている</p></li>
 <li><p>アーリーアダプター（Positron、Quarto）になりたい</p></li>
 <li><p>データの外観機能が気に入っている</p></li>
-<li><p>Pythonももっと触っていきたい</p></li>
+<li><p>Pythonをもっと触っていきたい</p></li>
 </ul></li>
 </ul>
 </section></section>
 <section id="参考資料" class="title-slide slide level1 center">
 <h1>参考資料</h1>
+<ul>
+<li><a href="https://note.com/mitti1210/n/n87a4ff6fc9c3">【AI全部載せできるRのデータ分析環境はこれ】Positron Assistantの導入ガイド</a></li>
+</ul>
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-
+<p>Masato Terai (Aichi Univ. of Technology)</p>
 </div>
 </div></div>
 
@@ -477,6 +550,7 @@
   <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -492,13 +566,14 @@
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': false,
+'previewLinksAuto': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -519,7 +594,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -631,7 +706,7 @@
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
+        backgroundTransition: 'fade',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
@@ -644,9 +719,9 @@
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1200,
 
-        height: 700,
+        height: 800,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
@@ -669,7 +744,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,

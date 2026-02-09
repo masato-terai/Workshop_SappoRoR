@@ -1,44 +1,61 @@
 ---
 title: "Positron入門!"
+subtitle: "Rユーザーのための次世代IDE"
 author: "寺井雅人（愛知工科大学）"
-format: revealjs
+format:
+  revealjs:
+    theme: style.scss
+    slide-number: c/t
+    #transition: fade
+    background-transition: fade
+    center: false
+    progress: true
+    navigation-mode: linear
+    footer: "Masato Terai (Aichi Univ. of Technology)"
+    width: 1200
+    height: 800
+    preview-links: auto
+    chalkboard: 
+      buttons: false
 title-slide-attributes:
-    data-background-image: title_image.png
-    data-background-size: contain
-    data-background-opacity: "0.2"
+  data-background-image: title_image.png
+  data-background-size: contain
+  data-background-opacity: "0.15"
 ---
 
 # 追加したいこと
 
-- レイアウトをもっとオシャレにしたい
-
-- ページ番号を挿入
+- RStudioとPositronのレイアウトの違いを、図で作成してみる
 
 # 講師プロフィール
 
-- 大学教員
+- 大学教員（助教）
 
 - Rの使用は、データの成形、分析が主
 
-    - 昨夏くらいからPositronへ移行
+    - 昨夏くらいからRStudioからPositronへ完全移行
 
 - 北海道は31年の人生で初
 
-# 今日の内容
+# 想定している聴衆の方
 
-- Rをメインで使用している方
+- Rをメインで使うもしくはR時々Pythonの方
 
 - パッケージ開発というより、データ分析などを主な用途としている方
 
-- AIアシストやrenv、コマンドラインGitは触れない
+# 今回の内容
+- 後で目次を挿入
 
+- AIアシストやrenv、コマンドラインGitは触れない
     - AIアシストのおすすめ記事：[Positron Assistant: データサイエンティスト向けのAIアシスタント機能](https://zenn.dev/uribo/articles/7dbc83e4bbfcc0)
 
 # Positronとは
 
-- RとPythonを"First-class"言語とするVS codeに似ている統合開発環境
+- RとPythonを"First-class"言語とするVisual Studio Codeに似ている統合開発環境
 
-## R Studioから乗り換えるべき？？
+    - Posit社（RStudioを開発した）が開発中の**次世代**統合開発環境
+
+## RStudioから乗り換えるべき？？
 
 - RStudioが消えるわけではない（開発が止まったりするわけではない）
     
@@ -101,18 +118,36 @@ title-slide-attributes:
 
 - バージョンの切り替えも、コンソールの再起動だけでよい
 
+# Search Bar
 
-## つまり
+# AI-Powered Data Science
+- Positronは、RStudioに比べ、より多くのAIサポートを受けることができる
+
+    - **Databot**機能など、ノーコードでの分析が可能に
+
+        - [公式Youtube（英語）](https://youtu.be/TrN-FMcOsOA?si=2YYNA2_Lv35QXwyD)
+
+# つまり
 
 - RStudioの機能をそのままに、新たな機能を拡張したわけではない
 
-- RStudioにしかない機能もあったりする
+    - RStudioにしかない機能もあったりする
+
+- RStudio: Rに特化した完成度の高い開発環境
+
+    - RだけならRStudio
+
+- Positron：多言語の将来性のある開発環境
+
+    - R + Python、今後は多言語もならPositron
 
 # とりあえず触ってみよう
 
 ## Positronのインストール
 
-- R Version 4.2以上が必要のようです
+- Rのインストールも忘れないように！
+
+    - R バージョン 4.2以上が必要
 
 - それぞれのOSに合うインストーラーを選ぶ
 
@@ -122,11 +157,14 @@ title-slide-attributes:
 
 - 画面構成：Editor, Console, Plots, Files
 
-## レイアウトの指定
+## レイアウト
 
+![from https://positron.posit.co/](https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg)
+
+## レイアウトの指定
 - Stacked Layout:デフォルト
 
-- Side-By-Side Layout：コンソールをソースペインの右にもっていきたい人へお勧め
+- Side-By-Side Layout：RStudioにより近い
 
 - Notebook Layout
 
@@ -153,7 +191,7 @@ boxplot(dat$mpg, dat$cyl)
 ## Git操作
 - サイドバーの上から3つ目がGit操作
 
-    - RStudioに比べ、クリック操作で行えるコマンドがかなり増えた
+    - RStudioに比べ、クリック操作で行えるコマンドがかなり増えた（VS Codeより）
 
     - GitHubとの連携もより簡単に（なった気がする）
 
@@ -189,21 +227,41 @@ boxplot(dat$mpg, dat$cyl)
 
     - Positronに既に備わっているExtensions
 
-# 最後に
+# まとめ
 
-## お勧めな理由
+## Positronがお勧めな理由
 
-### 1. 
-
-### 2. データ分析の便利な昨日
+### 1. データ分析のための補助機能
 
 - データの分布を一覧で出せる
 
-### 3. 
+## Positronがお勧めな理由
 
+### 2. Git操作がより簡単に
 - Gitが使いやすい。RStudioよりGUI操作の選択肢が多い
 
 - Githubとの連携が楽
+
+- GitやGithubをこれから勉強したい方へ
+
+    - [RStudioとGitの連携によるバージョン管理](https://www.jstage.jst.go.jp/article/methodologysig/17/0/17_17.3/_article/-char/ja/)
+
+    - [RStudio ユーザーのための GitHub 入門](https://www.jstage.jst.go.jp/article/methodologysig/18/0/18_18.2/_article/-char/ja/)
+
+## Positronがお勧めな理由
+
+### 3. AIのアシストをより受けられる
+- Databot機能などを活用すればほぼノーコードで分析が可能
+
+- 個人情報などの管理などには気を付けて！
+
+## Positronがお勧めでない理由
+
+- RStudioに比べるとまだ不安定
+
+- RStudioに慣れた人は最初戸惑うかも
+
+- R言語だけならRStudioで十分
 
 ## わさもん
 - 熊本弁：新しいもの好き
@@ -211,8 +269,6 @@ boxplot(dat$mpg, dat$cyl)
     - あん人はわさもんたい（あの人は新しいもの好きだね）
 
 ## Positronに移行しないとだめ！とは思わない
-
-- 好きなエディターでOK！
 
 - 個人的に使っている理由として、
 
@@ -222,6 +278,7 @@ boxplot(dat$mpg, dat$cyl)
 
     - データの外観機能が気に入っている
 
-    - Pythonももっと触っていきたい
+    - Pythonをもっと触っていきたい
 
 # 参考資料
+- [【AI全部載せできるRのデータ分析環境はこれ】Positron Assistantの導入ガイド](https://note.com/mitti1210/n/n87a4ff6fc9c3)
