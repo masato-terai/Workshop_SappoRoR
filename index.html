@@ -95,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-437f0adb367fd273ddcce56150f6012e.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-4538f2234d21aa496eade7297470906b.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -207,35 +207,44 @@
 </div>
 
 </section>
-<section id="追加したいこと" class="title-slide slide level1 center">
-<h1>追加したいこと</h1>
+<section id="講師プロフィール" class="slide level2">
+<h2>講師プロフィール</h2>
 <ul>
-<li>RStudioとPositronのレイアウトの違いを、図で作成してみる</li>
-</ul>
-</section>
-
-<section id="講師プロフィール" class="title-slide slide level1 center">
-<h1>講師プロフィール</h1>
+<li><p>寺井雅人（大谷翔平世代）</p>
 <ul>
-<li><p>大学教員（助教）</p></li>
-<li><p>Rの使用は、データの成形、分析が主</p>
+<li>熊本出身で、愛知在住</li>
+</ul></li>
+<li><p>大学教員（助教）</p>
 <ul>
-<li>昨夏くらいからRStudioからPositronへ完全移行</li>
+<li>外国語習得や言語理解に関する研究</li>
 </ul></li>
 <li><p>北海道は31年の人生で初</p></li>
 </ul>
 </section>
-
-<section id="想定している聴衆の方" class="title-slide slide level1 center">
-<h1>想定している聴衆の方</h1>
+<section id="私とrrコミュニティ" class="slide level2">
+<h2>私とR、Rコミュニティ</h2>
+<ul>
+<li><p>Rユーザー歴8年</p>
+<ul>
+<li>半年前、RStudioからPositronへ完全移行</li>
+</ul></li>
+<li><p>Rコミュニティ</p>
+<ul>
+<li><p>初参加：Nagoya.R (2018)</p></li>
+<li><p>初発表：Japan.R (2024)</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="想定している聴衆の方" class="slide level2">
+<h2>想定している聴衆の方</h2>
 <ul>
 <li><p>Rをメインで使うもしくはR時々Pythonの方</p></li>
 <li><p>パッケージ開発というより、データ分析などを主な用途としている方</p></li>
+<li><p>Visual Studio Codeより、RStudioに慣れ親しんでいる方</p></li>
 </ul>
 </section>
-
-<section id="今回の内容" class="title-slide slide level1 center">
-<h1>今回の内容</h1>
+<section id="今回の内容" class="slide level2">
+<h2>今回の内容</h2>
 <ul>
 <li><p>後で目次を挿入</p></li>
 <li><p>AIアシストやrenv、コマンドラインGitは触れない</p>
@@ -244,15 +253,19 @@
 </ul></li>
 </ul>
 </section>
-
-<section>
-<section id="positronとは" class="title-slide slide level1 center">
-<h1>Positronとは</h1>
+<section id="positronとは" class="slide level2">
+<h2>Positronとは</h2>
 <ul>
 <li><p>RとPythonを”First-class”言語とするVisual Studio Codeに似ている統合開発環境</p>
 <ul>
-<li>Posit社（RStudioを開発した）が開発中の<strong>次世代</strong>統合開発環境</li>
-</ul></li>
+<li><p>Posit社（RStudioを開発した）が開発中の<strong>次世代</strong>統合開発環境</p></li>
+<li><p>もう beta 版ではない</p></li>
+</ul>
+<blockquote>
+<p>Stable releases of Positron are now available!<br>
+Thank you to all our beta users who have been testing and giving feedback on our prereleases over the last year.</p>
+<p>— <a href="https://github.com/posit-dev/positron/releases?page=2">Positron GitHub Releases[Jul 3, 2025]</a></p>
+</blockquote></li>
 </ul>
 </section>
 <section id="rstudioから乗り換えるべき" class="slide level2">
@@ -281,12 +294,17 @@
 <section id="rstudio-を使っていてide-をもっと自分好みにカスタマイズしたり機能を拡張したりしたい人" class="slide level2">
 <h2><strong>RStudio を使っていて、IDE をもっと自分好みにカスタマイズしたり、機能を拡張したりしたい人。</strong></h2>
 <ul>
-<li><p>カスタマイズ</p></li>
-<li><p>機能を拡張</p>
+<li><p>拡張機能</p>
 <ul>
-<li><p>拡張機能</p></li>
-<li><p>Gitコマンド</p></li>
-<li><p>AIアシスト</p></li>
+<li>VS Codeのほとんどの拡張機能を使える</li>
+</ul></li>
+<li><p>Gitコマンド</p>
+<ul>
+<li>VS CodeレベルのGUI</li>
+</ul></li>
+<li><p>AIアシスト</p>
+<ul>
+<li>様々なLLMを選べる</li>
 </ul></li>
 </ul>
 </section>
@@ -302,7 +320,7 @@
 <li><p>画面に様々な機能が表示されている</p></li>
 <li><p>RStudioに慣れかけ始めた人</p></li>
 </ul>
-</section></section>
+</section>
 <section id="rstudioとの主な違い" class="title-slide slide level1 center">
 <h1>RStudioとの主な違い</h1>
 <ul>
@@ -367,7 +385,7 @@
 <section id="positronのインストール" class="slide level2">
 <h2>Positronのインストール</h2>
 <ul>
-<li><p>Rのインストールも忘れないように！</p>
+<li><p>Rのインストールも忘れずに！</p>
 <ul>
 <li>R バージョン 4.2以上が必要</li>
 </ul></li>
@@ -377,16 +395,43 @@
 </ul></li>
 </ul>
 </section>
-<section id="uiの外観" class="slide level2">
-<h2>UIの外観</h2>
-<ul>
-<li>画面構成：Editor, Console, Plots, Files</li>
-</ul>
-</section>
 <section id="レイアウト" class="slide level2">
 <h2>レイアウト</h2>
 
 <img data-src="https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg" class="r-stretch quarto-figure-center"><p class="caption">from https://positron.posit.co/</p></section>
+<section id="それぞれの機能" class="slide level2">
+<h2>それぞれの機能</h2>
+<ul>
+<li><p><strong>Activity Bar</strong>：ファイル、Git、拡張機能、AIアシストなどを表示</p></li>
+<li><p><strong>Primary Side Bar</strong>：Activity Barの詳細。Activity Barで選んだものによって内容が異なる。</p></li>
+<li><p><strong>Editor</strong>：コードを記述する箇所</p></li>
+<li><p><strong>Panel</strong>：コンソール、ターミナルなどが表示される</p></li>
+<li><p><strong>Secondary Side Bar</strong>：変数や、プロットなどが表示される</p></li>
+</ul>
+</section>
+<section id="rstudioとの比較" class="slide level2">
+<h2>RStudioとの比較</h2>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://docs.posit.co/ide/user/ide/guide/ui/images/rstudio-panes-labeled.png" height="450"></p>
+<figcaption>RStudio</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg" height="450"></p>
+<figcaption>Positron</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="レイアウトの指定" class="slide level2">
 <h2>レイアウトの指定</h2>
 <ul>
@@ -395,30 +440,70 @@
 <li><p>Notebook Layout</p></li>
 <li><p>Assistant Layout</p></li>
 </ul>
+</section></section>
+<section>
+<section id="アピールポイント" class="title-slide slide level1 center">
+<h1>アピールポイント</h1>
+
 </section>
 <section id="便利なデータの確認機能" class="slide level2">
 <h2>便利なデータの確認機能</h2>
 <ul>
-<li><p><code>mtcars</code>の中身をVARIABLESで確認</p>
-<ul>
-<li>データの分布や、欠損値の割合なども確認できる</li>
-</ul></li>
+<li><p>データの分布や、欠損値の割合などを確認できる</p></li>
+<li><p>以下のコードをRunして、VARIABLESで確認してみてください。</p></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {markdown} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>dat &lt;- mtcars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {markdown} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>dat &lt;- airquality</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="フィルター機能" class="slide level2">
+<h2>フィルター機能</h2>
+<ul>
+<li><p>RStudioよりもより詳細</p>
+<p><img data-src="filter.png"></p></li>
+</ul>
 </section>
 <section id="作成した図を確認可能" class="slide level2">
 <h2>作成した図を確認可能</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {markdown} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href=""></a>plot(dat$mpg)</span>
-<span id="cb2-2"><a href=""></a>boxplot(dat$mpg, dat$cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>セッション内で作成した図が表示されており、探しやすい</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {markdown} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href=""></a>dat &lt;- mtars</span>
+<span id="cb2-2"><a href=""></a>plot(dat$mpg)</span>
+<span id="cb2-3"><a href=""></a>boxplot(dat$mpg, dat$cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="git操作" class="slide level2">
 <h2>Git操作</h2>
 <ul>
 <li><p>サイドバーの上から3つ目がGit操作</p>
 <ul>
-<li><p>RStudioに比べ、クリック操作で行えるコマンドがかなり増えた（VS Codeより）</p></li>
+<li><p>RStudioに比べ、クリック操作で行えるコマンドがかなり増えた（VS Codeレベルになった）</p></li>
 <li><p>GitHubとの連携もより簡単に（なった気がする）</p></li>
 </ul></li>
+</ul>
+</section>
+<section id="preview機能" class="slide level2">
+<h2>Preview機能</h2>
+<ul>
+<li><p>Previewを見ながらqmdやRmdファイルを編集できる</p>
+<ul>
+<li>RStudioでは、Knit（Render）というステップが必要</li>
+</ul></li>
+</ul>
+
+<img data-src="preview.png" class="r-stretch"></section>
+<section id="ミニマップ機能全体を俯瞰" class="slide level2">
+<h2>ミニマップ機能（全体を俯瞰）</h2>
+<ul>
+<li><p>スクロールバーで右クリック → [Minimap]</p>
+<ul>
+<li>RStudioのOutline機能はないのが残念。その代用として使用</li>
+</ul></li>
+</ul>
+</section>
+<section id="入力補完機能" class="slide level2">
+<h2>入力補完機能</h2>
+<ul>
+<li><p>コード（RStudioでもできるがより選択肢が多い）</p></li>
+<li><p>ファイルパス（RStudioではできない）</p></li>
 </ul>
 </section>
 <section id="テーマフォントの変更" class="slide level2">
@@ -429,6 +514,37 @@
 <li>RStudioよりも選択肢が少ない</li>
 </ul></li>
 <li><p>フォントの大きさの変更：左下の⚙をクリック → [Settings] → [Text Editor] → [Font Size]</p></li>
+</ul>
+</section></section>
+<section>
+<section id="拡張機能寺井のおすすめ" class="title-slide slide level1 center">
+<h1>拡張機能（寺井のおすすめ）</h1>
+
+</section>
+<section id="vscode-pdf" class="slide level2">
+<h2>vscode-pdf</h2>
+<ul>
+<li><p>Positron内でPDFを確認できる</p>
+<ul>
+<li>Split Editorで並列させると便利</li>
+</ul></li>
+</ul>
+
+<img data-src="vscodepdf.png" class="r-stretch"></section>
+<section id="rainbow-csv" class="slide level2">
+<h2>Rainbow CSV</h2>
+<ul>
+<li>CSVファイルの中身を色分けして可読性を上げる</li>
+</ul>
+
+<img data-src="https://i.imgur.com/6eJqeUN.png" class="r-stretch"></section>
+<section id="material-icon-theme" class="slide level2">
+<h2>Material Icon Theme</h2>
+<ul>
+<li><p>フォルダやファイルのアイコンをより特徴的なアイコンに変える</p>
+<ul>
+<li>ファイルを探しやすい</li>
+</ul></li>
 </ul>
 </section></section>
 <section>
@@ -453,20 +569,6 @@
 </ul></li>
 </ul>
 </section></section>
-<section id="小ネタ" class="title-slide slide level1 center">
-<h1>小ネタ</h1>
-<ul>
-<li><p>ミニマップ機能（全体を俯瞰）</p>
-<ul>
-<li>スクロールバーで右クリック → [Minimap]</li>
-</ul></li>
-<li><p>Airでコードを綺麗に成形</p>
-<ul>
-<li>Positronに既に備わっているExtensions</li>
-</ul></li>
-</ul>
-</section>
-
 <section>
 <section id="まとめ" class="title-slide slide level1 center">
 <h1>まとめ</h1>
@@ -532,7 +634,9 @@
 <section id="参考資料" class="title-slide slide level1 center">
 <h1>参考資料</h1>
 <ul>
-<li><a href="https://note.com/mitti1210/n/n87a4ff6fc9c3">【AI全部載せできるRのデータ分析環境はこれ】Positron Assistantの導入ガイド</a></li>
+<li><p><a href="https://note.com/mitti1210/n/n87a4ff6fc9c3">【AI全部載せできるRのデータ分析環境はこれ】Positron Assistantの導入ガイド</a></p></li>
+<li><p><a href="https://note.com/mitti1210/n/nb41e77d49f51">Positronって実際どうなの？RStudioユーザーがCursorと比較しながら触ってみた</a></p></li>
+<li><p><a href="https://christophertkenny.com/posts/2024-06-29-positron-settings/#extensions">Settings, Keybindings, and Extensions for Positron</a></p></li>
 </ul>
 
 </section>

@@ -6,7 +6,6 @@ format:
   revealjs:
     theme: style.scss
     slide-number: c/t
-    #transition: fade
     background-transition: fade
     center: false
     progress: true
@@ -23,37 +22,56 @@ title-slide-attributes:
   data-background-opacity: "0.15"
 ---
 
-# 追加したいこと
+## 講師プロフィール
 
-- RStudioとPositronのレイアウトの違いを、図で作成してみる
+- 寺井雅人（大谷翔平世代）
 
-# 講師プロフィール
+    - 熊本出身で、愛知在住
 
 - 大学教員（助教）
 
-- Rの使用は、データの成形、分析が主
-
-    - 昨夏くらいからRStudioからPositronへ完全移行
+    - 外国語習得や言語理解に関する研究
 
 - 北海道は31年の人生で初
 
-# 想定している聴衆の方
+## 私とR、Rコミュニティ
+- Rユーザー歴8年
+
+    - 半年前、RStudioからPositronへ完全移行
+
+- Rコミュニティ
+
+    - 初参加：Nagoya.R (2018)
+
+    - 初発表：Japan.R (2024)
+
+## 想定している聴衆の方
 
 - Rをメインで使うもしくはR時々Pythonの方
 
 - パッケージ開発というより、データ分析などを主な用途としている方
 
-# 今回の内容
-- 後で目次を挿入
+- Visual Studio Codeより、RStudioに慣れ親しんでいる方
+
+## 今回の内容
+- **後で目次を挿入**
 
 - AIアシストやrenv、コマンドラインGitは触れない
     - AIアシストのおすすめ記事：[Positron Assistant: データサイエンティスト向けのAIアシスタント機能](https://zenn.dev/uribo/articles/7dbc83e4bbfcc0)
 
-# Positronとは
+## Positronとは
 
 - RとPythonを"First-class"言語とするVisual Studio Codeに似ている統合開発環境
 
     - Posit社（RStudioを開発した）が開発中の**次世代**統合開発環境
+
+  - もう beta 版ではない
+
+  > Stable releases of Positron are now available!  
+  > Thank you to all our beta users who have been testing and giving feedback on our prereleases over the last year.
+  >
+  > — [Positron GitHub Releases[Jul 3, 2025]](https://github.com/posit-dev/positron/releases?page=2)
+
 
 ## RStudioから乗り換えるべき？？
 
@@ -76,28 +94,21 @@ title-slide-attributes:
 
 - データ分析に特化した強力な AI 機能を、モダンで拡張性の高い IDE の中で使いたい人。
 
-## **RStudio を使っていて、IDE をもっと自分好みにカスタマイズしたり、機能を拡張したりしたい人。**
+## もっと自分好みにカスタマイズしたり、機能を拡張する
 
-- カスタマイズ
+- 拡張機能
 
-- 機能を拡張
+    - VS Codeのほとんどの拡張機能を使える
 
-    - 拡張機能
+- Gitコマンド
 
-    - Gitコマンド
+    - VS CodeレベルのGUI
 
-    - AIアシスト
+- AIアシスト
 
-## こんな人にお勧めかも（by 寺井）
-- RStudioでRを触り始めた人
+    - 様々なLLMを選べる
 
-## こんな人にお勧め**しない**かも（by 寺井）
-
-- 画面に様々な機能が表示されている
-
-- RStudioに慣れかけ始めた人
-
-# RStudioとの主な違い
+## RStudioとの主な違い
 - Rprojがない！
 
     - フォルダ = プロジェクト
@@ -110,6 +121,7 @@ title-slide-attributes:
 
     - Rmdファイルの場合、"Preview"に、"Render Document With R Markdown"が表示される
 
+## RStudioとの主な違い
 - 現時点では、RStudioとは異なり、実行結果は、コンソールペインでしか確認できない
 
     ```However, we are actively enhancing our Positron-native notebook UI that will provide inline outputs for Python or R sessions.```
@@ -118,16 +130,14 @@ title-slide-attributes:
 
 - バージョンの切り替えも、コンソールの再起動だけでよい
 
-# Search Bar
-
-# AI-Powered Data Science
+## AI-Powered Data Science
 - Positronは、RStudioに比べ、より多くのAIサポートを受けることができる
 
     - **Databot**機能など、ノーコードでの分析が可能に
 
         - [公式Youtube（英語）](https://youtu.be/TrN-FMcOsOA?si=2YYNA2_Lv35QXwyD)
 
-# つまり
+## つまり
 
 - RStudioの機能をそのままに、新たな機能を拡張したわけではない
 
@@ -145,7 +155,7 @@ title-slide-attributes:
 
 ## Positronのインストール
 
-- Rのインストールも忘れないように！
+- Rのインストールも忘れずに！
 
     - R バージョン 4.2以上が必要
 
@@ -153,13 +163,28 @@ title-slide-attributes:
 
     - [リンク](https://positron.posit.co/install.html)
 
-## UIの外観
-
-- 画面構成：Editor, Console, Plots, Files
-
 ## レイアウト
 
 ![from https://positron.posit.co/](https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg)
+
+## それぞれの機能
+- **Activity Bar**：ファイル、Git、拡張機能、AIアシストなどを表示
+
+- **Primary Side Bar**：Activity Barの詳細。Activity Barで選んだものによって内容が異なる。
+
+- **Editor**：コードを記述する箇所
+
+- **Panel**：コンソール、ターミナルなどが表示される
+
+- **Secondary Side Bar**：変数や、プロットなどが表示される
+
+## RStudioとの比較
+
+::: {layout-ncol="2"}
+![RStudio](https://docs.posit.co/ide/user/ide/guide/ui/images/rstudio-panes-labeled.png){height=450px}
+
+![Positron](https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg){height=450px}
+:::
 
 ## レイアウトの指定
 - Stacked Layout:デフォルト
@@ -170,20 +195,33 @@ title-slide-attributes:
 
 - Assistant Layout
 
+## Search Bar
+- 機能を説明する
+
+# アピールポイント
 
 ## 便利なデータの確認機能
 
-- ```mtcars```の中身をVARIABLESで確認
+- データの分布や、欠損値の割合などを確認できる
 
-    - データの分布や、欠損値の割合なども確認できる
+- 以下のコードをRunして、VARIABLESで確認してみてください。
 
 ```{markdown}
-dat <- mtcars
+dat <- airquality
 ```
+
+## フィルター機能
+- RStudioよりもより詳細
+
+    ![](filter.png)
+
 
 ## 作成した図を確認可能
 
+- セッション内で作成した図が表示されており、探しやすい
+
 ```{markdown}
+dat <- mtars
 plot(dat$mpg)
 boxplot(dat$mpg, dat$cyl)
 ```
@@ -191,9 +229,29 @@ boxplot(dat$mpg, dat$cyl)
 ## Git操作
 - サイドバーの上から3つ目がGit操作
 
-    - RStudioに比べ、クリック操作で行えるコマンドがかなり増えた（VS Codeより）
+    - RStudioに比べ、クリック操作で行えるコマンドがかなり増えた（VS Codeレベルになった）
 
     - GitHubとの連携もより簡単に（なった気がする）
+
+## Preview機能
+
+- Previewを見ながらqmdやRmdファイルを編集できる
+
+    - RStudioでは、Knit（Render）というステップが必要
+
+![](preview.png)
+
+## ミニマップ機能（全体を俯瞰）
+
+- スクロールバーで右クリック → [Minimap]
+
+    - RStudioのOutline機能はないのが残念。その代用として使用
+
+## 入力補完機能
+
+- コード（RStudioでもできるがより選択肢が多い）
+
+- ファイルパス（RStudioではできない）
 
 ## テーマ・フォントの変更
 - テーマの変更：左下の⚙をクリック → [Themes] → [Color Theme]
@@ -201,6 +259,27 @@ boxplot(dat$mpg, dat$cyl)
     - RStudioよりも選択肢が少ない
 
 - フォントの大きさの変更：左下の⚙をクリック → [Settings] → [Text Editor] → [Font Size]
+
+# 拡張機能（寺井のおすすめ）
+
+## vscode-pdf
+- Positron内でPDFを確認できる
+
+    - Split Editorで並列させると便利
+
+![](vscodepdf.png)
+
+## Rainbow CSV
+
+- CSVファイルの中身を色分けして可読性を上げる
+
+![](https://i.imgur.com/6eJqeUN.png)
+
+## Material Icon Theme
+
+- フォルダやファイルのアイコンをより特徴的なアイコンに変える
+
+    - ファイルを探しやすい
 
 # R MarkdownとQuarto
 
@@ -217,15 +296,6 @@ boxplot(dat$mpg, dat$cyl)
 - Rしか使わないのであれば、R MarkdownのままでOK！
 
     - チャンクの書き方など微妙に違いはあるが、比較的スムーズに移行できるので、お勧めします！
-
-# 小ネタ
-- ミニマップ機能（全体を俯瞰）
-
-    - スクロールバーで右クリック → [Minimap]
-
-- Airでコードを綺麗に成形
-
-    - Positronに既に備わっているExtensions
 
 # まとめ
 
@@ -282,3 +352,7 @@ boxplot(dat$mpg, dat$cyl)
 
 # 参考資料
 - [【AI全部載せできるRのデータ分析環境はこれ】Positron Assistantの導入ガイド](https://note.com/mitti1210/n/n87a4ff6fc9c3)
+
+- [Positronって実際どうなの？RStudioユーザーがCursorと比較しながら触ってみた](https://note.com/mitti1210/n/nb41e77d49f51)
+
+- [Settings, Keybindings, and Extensions for Positron](https://christophertkenny.com/posts/2024-06-29-positron-settings/#extensions)
