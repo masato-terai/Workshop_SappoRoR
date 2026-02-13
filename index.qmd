@@ -24,7 +24,7 @@ format:
     chalkboard: 
       buttons: false
 title-slide-attributes:
-  data-background-image: title_image.png
+  data-background-image: fig/title_image.png
   data-background-size: contain
   data-background-opacity: "0.15"
 ---
