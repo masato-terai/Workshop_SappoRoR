@@ -95,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-4538f2234d21aa496eade7297470906b.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-ccd19edbfc1d7258551a9a9b23483c80.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -206,6 +206,15 @@
 </div>
 </div>
 
+  <p class="date">2026-02-13 18:57:40</p>
+</section>
+<section>
+<section id="todo" class="title-slide slide level1 center">
+<h1>Todo</h1>
+<ul>
+<li>他からリンクで引っ張ってきている個所は、引用をかく</li>
+<li>Title Slideは個別で画像を入れる</li>
+</ul>
 </section>
 <section id="講師プロフィール" class="slide level2">
 <h2>講師プロフィール</h2>
@@ -220,6 +229,9 @@
 </ul></li>
 <li><p>北海道は31年の人生で初</p></li>
 </ul>
+<div class="top-right">
+<p><img data-src="fig/masa.jpg" width="300"></p>
+</div>
 </section>
 <section id="私とrrコミュニティ" class="slide level2">
 <h2>私とR、Rコミュニティ</h2>
@@ -246,7 +258,7 @@
 <section id="今回の内容" class="slide level2">
 <h2>今回の内容</h2>
 <ul>
-<li><p>後で目次を挿入</p></li>
+<li><p><strong>後で目次を挿入</strong></p></li>
 <li><p>AIアシストやrenv、コマンドラインGitは触れない</p>
 <ul>
 <li>AIアシストのおすすめ記事：<a href="https://zenn.dev/uribo/articles/7dbc83e4bbfcc0">Positron Assistant: データサイエンティスト向けのAIアシスタント機能</a></li>
@@ -291,8 +303,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>データ分析に特化した強力な AI 機能を、モダンで拡張性の高い IDE の中で使いたい人。</p></li>
 </ul>
 </section>
-<section id="rstudio-を使っていてide-をもっと自分好みにカスタマイズしたり機能を拡張したりしたい人" class="slide level2">
-<h2><strong>RStudio を使っていて、IDE をもっと自分好みにカスタマイズしたり、機能を拡張したりしたい人。</strong></h2>
+<section id="もっと自分好みにカスタマイズしたり機能を拡張する" class="slide level2">
+<h2>もっと自分好みにカスタマイズしたり、機能を拡張する</h2>
 <ul>
 <li><p>拡張機能</p>
 <ul>
@@ -308,21 +320,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section>
-<section id="こんな人にお勧めかもby-寺井" class="slide level2">
-<h2>こんな人にお勧めかも（by 寺井）</h2>
-<ul>
-<li>RStudioでRを触り始めた人</li>
-</ul>
-</section>
-<section id="こんな人にお勧めしないかもby-寺井" class="slide level2">
-<h2>こんな人にお勧め<strong>しない</strong>かも（by 寺井）</h2>
-<ul>
-<li><p>画面に様々な機能が表示されている</p></li>
-<li><p>RStudioに慣れかけ始めた人</p></li>
-</ul>
-</section>
-<section id="rstudioとの主な違い" class="title-slide slide level1 center">
-<h1>RStudioとの主な違い</h1>
+<section id="rstudioとの主な違い" class="slide level2">
+<h2>RStudioとの主な違い</h2>
 <ul>
 <li><p>Rprojがない！</p>
 <ul>
@@ -334,20 +333,19 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>qmdファイルの場合、“Preview”や”Render on Save”で書きだす</p></li>
 <li><p>Rmdファイルの場合、“Preview”に、“Render Document With R Markdown”が表示される</p></li>
 </ul></li>
+</ul>
+</section>
+<section id="rstudioとの主な違い-1" class="slide level2">
+<h2>RStudioとの主な違い</h2>
+<ul>
 <li><p>現時点では、RStudioとは異なり、実行結果は、コンソールペインでしか確認できない</p>
 <p><code>However, we are actively enhancing our Positron-native notebook UI that will provide inline outputs for Python or R sessions.</code></p></li>
 <li><p>Rがクラッシュしても、Positron自体は生き残ることが多い</p></li>
 <li><p>バージョンの切り替えも、コンソールの再起動だけでよい</p></li>
 </ul>
 </section>
-
-<section id="search-bar" class="title-slide slide level1 center">
-<h1>Search Bar</h1>
-
-</section>
-
-<section id="ai-powered-data-science" class="title-slide slide level1 center">
-<h1>AI-Powered Data Science</h1>
+<section id="ai-powered-data-science" class="slide level2">
+<h2>AI-Powered Data Science</h2>
 <ul>
 <li><p>Positronは、RStudioに比べ、より多くのAIサポートを受けることができる</p>
 <ul>
@@ -358,9 +356,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section>
-
-<section id="つまり" class="title-slide slide level1 center">
-<h1>つまり</h1>
+<section id="つまり" class="slide level2">
+<h2>つまり</h2>
 <ul>
 <li><p>RStudioの機能をそのままに、新たな機能を拡張したわけではない</p>
 <ul>
@@ -375,8 +372,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li>R + Python、今後は多言語もならPositron</li>
 </ul></li>
 </ul>
-</section>
-
+</section></section>
 <section>
 <section id="とりあえず触ってみよう" class="title-slide slide level1 center">
 <h1>とりあえず触ってみよう</h1>
@@ -398,7 +394,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <section id="レイアウト" class="slide level2">
 <h2>レイアウト</h2>
 
-<img data-src="https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg" class="r-stretch quarto-figure-center"><p class="caption">from https://positron.posit.co/</p></section>
+<img data-src="https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg" class="r-stretch quarto-figure-center"><p class="caption">Pic From https://positron.posit.co/</p></section>
 <section id="それぞれの機能" class="slide level2">
 <h2>それぞれの機能</h2>
 <ul>
@@ -417,7 +413,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://docs.posit.co/ide/user/ide/guide/ui/images/rstudio-panes-labeled.png" height="450"></p>
-<figcaption>RStudio</figcaption>
+<figcaption>Pic From https://docs.posit.co/</figcaption>
 </figure>
 </div>
 </div>
@@ -425,7 +421,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg" height="450"></p>
-<figcaption>Positron</figcaption>
+<figcaption>Pic From https://positron.posit.co/</figcaption>
 </figure>
 </div>
 </div>
@@ -440,6 +436,13 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>Notebook Layout</p></li>
 <li><p>Assistant Layout</p></li>
 </ul>
+</section>
+<section id="search-bar" class="slide level2">
+<h2>Search Bar</h2>
+<ul>
+<li><p>機能を説明する</p></li>
+<li><p>https://positron.posit.co/command-palette.html</p></li>
+</ul>
 </section></section>
 <section>
 <section id="アピールポイント" class="title-slide slide level1 center">
@@ -452,13 +455,13 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>データの分布や、欠損値の割合などを確認できる</p></li>
 <li><p>以下のコードをRunして、VARIABLESで確認してみてください。</p></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {markdown} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>dat &lt;- airquality</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>dat <span class="ot">&lt;-</span> airquality</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="フィルター機能" class="slide level2">
 <h2>フィルター機能</h2>
 <ul>
 <li><p>RStudioよりもより詳細</p>
-<p><img data-src="filter.png"></p></li>
+<p><img data-src="fig/filter.png"></p></li>
 </ul>
 </section>
 <section id="作成した図を確認可能" class="slide level2">
@@ -466,9 +469,9 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <ul>
 <li>セッション内で作成した図が表示されており、探しやすい</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {markdown} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href=""></a>dat &lt;- mtars</span>
-<span id="cb2-2"><a href=""></a>plot(dat$mpg)</span>
-<span id="cb2-3"><a href=""></a>boxplot(dat$mpg, dat$cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>dat <span class="ot">&lt;-</span> mtars</span>
+<span id="cb2-2"><a href=""></a><span class="fu">plot</span>(dat<span class="sc">$</span>mpg)</span>
+<span id="cb2-3"><a href=""></a><span class="fu">boxplot</span>(dat<span class="sc">$</span>mpg, dat<span class="sc">$</span>cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="git操作" class="slide level2">
 <h2>Git操作</h2>
@@ -477,6 +480,16 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <ul>
 <li><p>RStudioに比べ、クリック操作で行えるコマンドがかなり増えた（VS Codeレベルになった）</p></li>
 <li><p>GitHubとの連携もより簡単に（なった気がする）</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="githubの入門に関して" class="slide level2">
+<h2>Git(hub)の入門に関して</h2>
+<ul>
+<li><p>GitやGithubをこれから勉強したい方へ</p>
+<ul>
+<li><p><a href="https://www.jstage.jst.go.jp/article/methodologysig/17/0/17_17.3/_article/-char/ja/">RStudioとGitの連携によるバージョン管理</a></p></li>
+<li><p><a href="https://www.jstage.jst.go.jp/article/methodologysig/18/0/18_18.2/_article/-char/ja/">RStudio ユーザーのための GitHub 入門</a></p></li>
 </ul></li>
 </ul>
 </section>
@@ -489,7 +502,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 
-<img data-src="preview.png" class="r-stretch"></section>
+<img data-src="fig/preview.png" class="r-stretch"></section>
 <section id="ミニマップ機能全体を俯瞰" class="slide level2">
 <h2>ミニマップ機能（全体を俯瞰）</h2>
 <ul>
@@ -517,8 +530,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul>
 </section></section>
 <section>
-<section id="拡張機能寺井のおすすめ" class="title-slide slide level1 center">
-<h1>拡張機能（寺井のおすすめ）</h1>
+<section id="拡張機能寺井おすすめ" class="title-slide slide level1 center">
+<h1>拡張機能（寺井おすすめ）</h1>
 
 </section>
 <section id="vscode-pdf" class="slide level2">
@@ -530,14 +543,14 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 
-<img data-src="vscodepdf.png" class="r-stretch"></section>
+<img data-src="fig/vscodepdf.png" class="r-stretch"></section>
 <section id="rainbow-csv" class="slide level2">
 <h2>Rainbow CSV</h2>
 <ul>
 <li>CSVファイルの中身を色分けして可読性を上げる</li>
 </ul>
 
-<img data-src="https://i.imgur.com/6eJqeUN.png" class="r-stretch"></section>
+<img data-src="https://i.imgur.com/6eJqeUN.png" class="r-stretch quarto-figure-center"><p class="caption">Pic From Rainbow CSV</p></section>
 <section id="material-icon-theme" class="slide level2">
 <h2>Material Icon Theme</h2>
 <ul>
@@ -548,26 +561,202 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul>
 </section></section>
 <section>
-<section id="r-markdownとquarto" class="title-slide slide level1 center">
-<h1>R MarkdownとQuarto</h1>
+<section id="quartoとr-markdown" class="title-slide slide level1 center" data-background="#ffffffe8" data-background-image="rmdqmd.png" data-background-size="600px" data-background-position="bottom right" data-background-repeat="no-repeat">
+<h1>QuartoとR Markdown</h1>
 
 </section>
 <section id="概要" class="slide level2">
 <h2>概要</h2>
 <ul>
-<li><p><code>Quarto is a multi-language, next generation version of R Markdown from RStudio, with many new features and capabilities.</code></p>
+<li><p>Pandocを基盤にした、研究・技術文書作成のための出版システム</p></li>
+<li><p>Rに依存しない</p>
 <ul>
-<li>様々なプログラム言語に対応（e.g., R、Python、Julia）</li>
-</ul></li>
-<li><p>PositronとQuarto、RStudioとR Markdown</p>
-<ul>
-<li>R MarkdownはRStudio内で完結するのが快適。QuartoはVSコードやJupyter、PositronでもOK!</li>
-</ul></li>
-<li><p>Rしか使わないのであれば、R MarkdownのままでOK！</p>
-<ul>
-<li>チャンクの書き方など微妙に違いはあるが、比較的スムーズに移行できるので、お勧めします！</li>
+<li><p>R -&gt; R Markdown</p></li>
+<li><p>Python -&gt; R Markdown = Rの追加インストール</p></li>
+<li><p>R -&gt; Jupyter = Pythonの追加インストール</p></li>
+<li><p>R &amp; Python -&gt; Quarto</p></li>
 </ul></li>
 </ul>
+</section>
+<section id="r-markdownとの違い" class="slide level2">
+<h2>R Markdownとの違い</h2>
+<ul>
+<li><p>様々なプログラム言語に対応（e.g., R、Python、Julia）</p>
+<ul>
+<li>QuartoはRStudio外でも使いやすい</li>
+</ul></li>
+<li><p>Quartoは単体のツール</p>
+<ul>
+<li><p>R Markdownでは、distill -&gt; website、bookdown -&gt; 本, revealjs -&gt; スライド</p></li>
+<li><p>Quartoは以上を一つにまとめている</p>
+<ul>
+<li>長期的にパッケージ管理がしやすい</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="r-markdownとの違い-1" class="slide level2">
+<h2>R Markdownとの違い</h2>
+<ul>
+<li><p>PositronとQuarto、RStudioとR Markdown</p>
+<ul>
+<li><p>R MarkdownはRStudio内で完結するのが快適（Pythonが使えないわけではない）</p></li>
+<li><p>QuartoはVSコードやJupyter、PositronでもOK!</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="r-markdownの今後" class="slide level2">
+<h2>R Markdownの今後</h2>
+<ul>
+<li><p>RStudioと同様、今後も生き残るらしいのでご安心を</p>
+<ul>
+<li>R Markdownに満足しているのであれば、急いでQuartoに変える必要もない</li>
+</ul></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>R Markdown is not going away! R Markdown is used extensively and continues to work well. It will continue to be actively supported. — <a href="https://quarto.org/docs/faq/rmarkdown.html?utm_source=chatgpt.com#is-r-markdown-going-away-will-my-r-markdown-documents-continue-to-work">FAQ for R Markdown Users</a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="positronでquartoを触ってみましょう" class="slide level2">
+<h2>PositronでQuartoを触ってみましょう</h2>
+<ul>
+<li><p>左上のNewをクリック -&gt; ［New File…］ -&gt; ［Quarto Document］をクリック</p></li>
+<li><p>キーボードから手を放したくないのであれば、</p>
+<ul>
+<li>[Ctrl] + [P] を押す -&gt; [&gt;]を入力 -&gt; [Create New File…] -&gt; ［New File…］ -&gt; ［Quarto Document］</li>
+</ul></li>
+</ul>
+</section>
+<section id="r-markdownファイルも開きましょう" class="slide level2">
+<h2>R Markdownファイルも開きましょう</h2>
+<ul>
+<li><p>残念ながら、.Rmdファイルのテンプレート選択画面はない</p>
+<ul>
+<li>RStudioで作成した.Rmdファイルを開きます</li>
+</ul></li>
+</ul>
+</section>
+<section id="r-markdownとの記法の違い" class="slide level2">
+<h2>R Markdownとの記法の違い</h2>
+<h3 id="yaml">YAML</h3>
+<ul>
+<li><p>出力形式の指定</p>
+<ul>
+<li><p>Quarto: format</p>
+<ul>
+<li>HTML: html</li>
+</ul></li>
+<li><p>R Markdown: output</p>
+<ul>
+<li>HTML: html_document</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<img data-src="fig/yaml.png" class="r-stretch"></section>
+<section id="yaml-1" class="slide level2">
+<h2>YAML</h2>
+<ul>
+<li><p>R Markdownに合わせて書くと…</p>
+<ul>
+<li><code>date: now</code>でもよい</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb3" data-code-line-numbers="3-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>title<span class="sc">:</span> <span class="st">"Untitled"</span></span>
+<span id="cb3-2"><a href=""></a>author<span class="sc">:</span> <span class="st">"Masato Terai"</span></span>
+<span id="cb3-3"><a href=""></a>date<span class="sc">:</span> today          </span>
+<span id="cb3-4"><a href=""></a>format<span class="sc">:</span> html</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="コードチャンク" class="slide level2">
+<h2>コードチャンク</h2>
+<ul>
+<li><p>オプションの指定の仕方</p>
+<ul>
+<li>Quartoの方が可読性が高い</li>
+</ul></li>
+<li><p>R Markdown：チャンクで指定</p></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href=""></a><span class="in">``` {.r echo = F, fig.dim = c(10, 4.5)}</span></span>
+<span id="cb4-2"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-3"><a href=""></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(hp, mpg, <span class="at">color =</span> am)) <span class="sc">+</span></span>
+<span id="cb4-4"><a href=""></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Quarto：チャンク<strong>内</strong>で指定</li>
+</ul>
+<div class="sourceCode" id="cb5" data-code-line-numbers="1-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="co">#| echo: false</span></span>
+<span id="cb5-2"><a href=""></a><span class="co">#| fig-width: 10</span></span>
+<span id="cb5-3"><a href=""></a><span class="co">#| fig-height: 4.5</span></span>
+<span id="cb5-4"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-5"><a href=""></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(hp, mpg, <span class="at">color =</span> am)) <span class="sc">+</span></span>
+<span id="cb5-6"><a href=""></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="r-markdownとの記法の違い-1" class="slide level2">
+<h2>R Markdownとの記法の違い</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Quartoでは、R Markdownよりも記法が少し厳しい印象です。</p>
+<p>例えば、<code>echo = F</code>と書いたり、“:” の後に半角スペースを入れないと怒られます。</p>
+</div>
+</div>
+</div>
+<ul>
+<li><p>網羅的な記法は公式の資料を参照してください</p>
+<ul>
+<li><a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown Basics</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="htmlファイルに書き出す" class="slide level2">
+<h2>HTMLファイルに書き出す</h2>
+<ul>
+<li><p>Quarto -&gt; ［Preview］もしくは［口 Render on Save］に✔を入れてから保存</p>
+<ul>
+<li><p>TERMINALも可能</p>
+<ul>
+<li><p><code>quarto preview ファイル名.qmd</code></p></li>
+<li><p><code>quarto render ファイル名.qmd</code></p></li>
+</ul></li>
+</ul></li>
+<li><p>R Markdown -&gt; 上記の方法もしくは［Preview］に［Render Document With R Markdown］</p></li>
+</ul>
+</section>
+<section id="ちなみに" class="slide level2">
+<h2>ちなみに</h2>
+<div class="callout callout-caution callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Caution</strong></p>
+</div>
+<div class="callout-content">
+<p>TERMINALでRenderすることも可能ですが、YAMLでengineを定義していない場合、エラーになる場合があります。</p>
+<p>例えば、Python3がないと、TERMINAL操作ではRenderできません。おそらくデフォルトでJupyter設定になっています。</p>
+<blockquote>
+<p>Starting python3 kernel…Python Unable to locate an installed version of Python 3. Install Python 3 from https://www.python.org/downloads/</p>
+</blockquote>
+<p>従って、RユーザーはYAMLで以下のようにKnitrを明示しておくといいかもしれません。 <code>engine: knitr</code></p>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="まとめ" class="title-slide slide level1 center">
@@ -578,7 +767,9 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <h2>Positronがお勧めな理由</h2>
 <h3 id="データ分析のための補助機能">1. データ分析のための補助機能</h3>
 <ul>
-<li>データの分布を一覧で出せる</li>
+<li><p>データの分布を一覧で出せる</p></li>
+<li><p>プロットの一覧が見れる</p></li>
+<li><p>手をキーボードから離す頻度が減る</p></li>
 </ul>
 </section>
 <section id="positronがお勧めな理由-1" class="slide level2">
@@ -587,11 +778,6 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <ul>
 <li><p>Gitが使いやすい。RStudioよりGUI操作の選択肢が多い</p></li>
 <li><p>Githubとの連携が楽</p></li>
-<li><p>GitやGithubをこれから勉強したい方へ</p>
-<ul>
-<li><p><a href="https://www.jstage.jst.go.jp/article/methodologysig/17/0/17_17.3/_article/-char/ja/">RStudioとGitの連携によるバージョン管理</a></p></li>
-<li><p><a href="https://www.jstage.jst.go.jp/article/methodologysig/18/0/18_18.2/_article/-char/ja/">RStudio ユーザーのための GitHub 入門</a></p></li>
-</ul></li>
 </ul>
 </section>
 <section id="positronがお勧めな理由-2" class="slide level2">
@@ -602,48 +788,45 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>個人情報などの管理などには気を付けて！</p></li>
 </ul>
 </section>
-<section id="positronがお勧めでない理由" class="slide level2">
-<h2>Positronがお勧めでない理由</h2>
+<section id="positronをお勧めしない理由" class="slide level2">
+<h2>Positronをお勧めしない理由</h2>
 <ul>
 <li><p>RStudioに比べるとまだ不安定</p></li>
 <li><p>RStudioに慣れた人は最初戸惑うかも</p></li>
 <li><p>R言語だけならRStudioで十分</p></li>
 </ul>
 </section>
-<section id="わさもん" class="slide level2">
-<h2>わさもん</h2>
-<ul>
-<li><p>熊本弁：新しいもの好き</p>
-<ul>
-<li>あん人はわさもんたい（あの人は新しいもの好きだね）</li>
-</ul></li>
-</ul>
-</section>
 <section id="positronに移行しないとだめとは思わない" class="slide level2">
 <h2>Positronに移行しないとだめ！とは思わない</h2>
 <ul>
-<li><p>個人的に使っている理由として、</p>
+<li><p>Positronへ乗り換えた個人的理由として、</p>
 <ul>
-<li><p>Positronの将来に賭けている</p></li>
-<li><p>アーリーアダプター（Positron、Quarto）になりたい</p></li>
+<li><p>わさもんだから（熊本弁：新しいもの好き）</p></li>
 <li><p>データの外観機能が気に入っている</p></li>
-<li><p>Pythonをもっと触っていきたい</p></li>
+<li><p>Pythonをもっと習得したいが、言語によってIDEを変えたくないから</p></li>
 </ul></li>
 </ul>
 </section></section>
+<section id="おしまい" class="title-slide slide level1 center">
+<h1>おしまい</h1>
+<p>Enjoy</p>
+<p>(画像を挿入)</p>
+</section>
+
 <section id="参考資料" class="title-slide slide level1 center">
 <h1>参考資料</h1>
 <ul>
 <li><p><a href="https://note.com/mitti1210/n/n87a4ff6fc9c3">【AI全部載せできるRのデータ分析環境はこれ】Positron Assistantの導入ガイド</a></p></li>
 <li><p><a href="https://note.com/mitti1210/n/nb41e77d49f51">Positronって実際どうなの？RStudioユーザーがCursorと比較しながら触ってみた</a></p></li>
 <li><p><a href="https://christophertkenny.com/posts/2024-06-29-positron-settings/#extensions">Settings, Keybindings, and Extensions for Positron</a></p></li>
+<li><p><a href="https://www.jumpingrivers.com/blog/quarto-rmarkdown-comparison/">I’m an R user: Quarto or R Markdown?</a></p></li>
 </ul>
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Masato Terai (Aichi Univ. of Technology)</p>
+<p>Published: 2026-02-13, Last update: 2026-02-13 18:57:40, Time Zone: Asia/Tokyo</p>
 </div>
 </div></div>
 
@@ -857,6 +1040,82 @@ Thank you to all our beta users who have been testing and giving feedback on our
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

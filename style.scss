@@ -40,11 +40,51 @@ $code-block-font-size: 1em;
 }
 
 /* タイトルスライド */
-.reveal .title {
+/* レイアウト調整 */
+.reveal section#title-slide {
+  .title,
+  .subtitle,
+  .quarto-title-author {
+  display: inline-block;
+  flex-direction: column;   // 縦並び
+  justify-content: center;  // 垂直中央
+  align-items: center;      // 水平中央
+  text-align: center;
   background-color: $theme-darkblue;
   color: #FFFFFF;
   letter-spacing: 0.04em;
+  padding: 0.3em;  
+  }
 }
+
+/* subtitle の直下に author を配置 */
+.reveal #title-slide .subtitle {
+  margin-bottom: 0.5em;
+}
+
+.reveal #title-slide .author {
+  margin-top: 0;
+}
+
+
+/* タイトルスライドの日付を非表示（Quarto revealjs） */
+.reveal {
+  section#title-slide {
+    p.date,
+    .date {
+      display: none !important;
+    }
+  }
+}
+
+/* 念のため（テーマ差異で #title-slide が使われない場合） */
+.reveal section.title-slide {
+  p.date,
+  .date {
+    display: none !important;
+  }
+}
+
 
 /* フッター */
 .reveal .footer {
@@ -74,3 +114,5 @@ $code-block-font-size: 1em;
   font-size: 0.85em;
   color: #6B7C93;
 }
+
+

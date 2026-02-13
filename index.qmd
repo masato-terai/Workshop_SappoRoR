@@ -1,7 +1,11 @@
 ---
 title: "Positron入門!"
 subtitle: "Rユーザーのための次世代IDE"
+date:
+  value: now
+  format: "YYYY-MM-DD HH:mm:ss"
 author: "寺井雅人（愛知工科大学）"
+engine: knitr
 format:
   revealjs:
     theme: style.scss
@@ -10,7 +14,10 @@ format:
     center: false
     progress: true
     navigation-mode: linear
-    footer: "Masato Terai (Aichi Univ. of Technology)"
+    footer: |
+      Published: 2026-02-13,
+      Last update: {{< meta date >}},
+      Time Zone: Asia/Tokyo
     width: 1200
     height: 800
     preview-links: auto
@@ -21,6 +28,10 @@ title-slide-attributes:
   data-background-size: contain
   data-background-opacity: "0.15"
 ---
+
+# Todo
+- 他からリンクで引っ張ってきている個所は、引用をかく
+- Title Slideは個別で画像を入れる
 
 ## 講師プロフィール
 
@@ -33,6 +44,10 @@ title-slide-attributes:
     - 外国語習得や言語理解に関する研究
 
 - 北海道は31年の人生で初
+
+::: {.top-right}
+![](fig/masa.jpg){width=300px}
+:::
 
 ## 私とR、Rコミュニティ
 - Rユーザー歴8年
@@ -165,7 +180,7 @@ title-slide-attributes:
 
 ## レイアウト
 
-![from https://positron.posit.co/](https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg)
+![Pic From https://positron.posit.co/](https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg)
 
 ## それぞれの機能
 - **Activity Bar**：ファイル、Git、拡張機能、AIアシストなどを表示
@@ -181,9 +196,9 @@ title-slide-attributes:
 ## RStudioとの比較
 
 ::: {layout-ncol="2"}
-![RStudio](https://docs.posit.co/ide/user/ide/guide/ui/images/rstudio-panes-labeled.png){height=450px}
+![Pic From https://docs.posit.co/](https://docs.posit.co/ide/user/ide/guide/ui/images/rstudio-panes-labeled.png){height=450px}
 
-![Positron](https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg){height=450px}
+![Pic From https://positron.posit.co/](https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg){height=450px}
 :::
 
 ## レイアウトの指定
@@ -198,6 +213,8 @@ title-slide-attributes:
 ## Search Bar
 - 機能を説明する
 
+- https://positron.posit.co/command-palette.html
+
 # アピールポイント
 
 ## 便利なデータの確認機能
@@ -206,21 +223,20 @@ title-slide-attributes:
 
 - 以下のコードをRunして、VARIABLESで確認してみてください。
 
-```{markdown}
+```{.r}
 dat <- airquality
 ```
 
 ## フィルター機能
 - RStudioよりもより詳細
 
-    ![](filter.png)
-
+    ![](fig/filter.png)
 
 ## 作成した図を確認可能
 
 - セッション内で作成した図が表示されており、探しやすい
 
-```{markdown}
+```{.r}
 dat <- mtars
 plot(dat$mpg)
 boxplot(dat$mpg, dat$cyl)
@@ -233,13 +249,21 @@ boxplot(dat$mpg, dat$cyl)
 
     - GitHubとの連携もより簡単に（なった気がする）
 
+## Git(hub)の入門に関して
+- GitやGithubをこれから勉強したい方へ
+
+    - [RStudioとGitの連携によるバージョン管理](https://www.jstage.jst.go.jp/article/methodologysig/17/0/17_17.3/_article/-char/ja/)
+
+    - [RStudio ユーザーのための GitHub 入門](https://www.jstage.jst.go.jp/article/methodologysig/18/0/18_18.2/_article/-char/ja/)
+
+
 ## Preview機能
 
 - Previewを見ながらqmdやRmdファイルを編集できる
 
     - RStudioでは、Knit（Render）というステップが必要
 
-![](preview.png)
+![](fig/preview.png)
 
 ## ミニマップ機能（全体を俯瞰）
 
@@ -260,20 +284,20 @@ boxplot(dat$mpg, dat$cyl)
 
 - フォントの大きさの変更：左下の⚙をクリック → [Settings] → [Text Editor] → [Font Size]
 
-# 拡張機能（寺井のおすすめ）
+# 拡張機能（寺井おすすめ）
 
 ## vscode-pdf
 - Positron内でPDFを確認できる
 
     - Split Editorで並列させると便利
 
-![](vscodepdf.png)
+![](fig/vscodepdf.png)
 
 ## Rainbow CSV
 
 - CSVファイルの中身を色分けして可読性を上げる
 
-![](https://i.imgur.com/6eJqeUN.png)
+![Pic From Rainbow CSV](https://i.imgur.com/6eJqeUN.png)
 
 ## Material Icon Theme
 
@@ -281,21 +305,156 @@ boxplot(dat$mpg, dat$cyl)
 
     - ファイルを探しやすい
 
-# R MarkdownとQuarto
+# QuartoとR Markdown{background="#ffffffe8" background-image="rmdqmd.png" background-size="600px" background-position="bottom right" background-repeat="no-repeat"}
 
 ## 概要
+- Pandocを基盤にした、研究・技術文書作成のための出版システム
 
-- ```Quarto is a multi-language, next generation version of R Markdown from RStudio, with many new features and capabilities.```
+- Rに依存しない
 
-    - 様々なプログラム言語に対応（e.g., R、Python、Julia）
+    - R -> R Markdown
 
+    - Python -> R Markdown = Rの追加インストール
+
+    - R -> Jupyter = Pythonの追加インストール
+
+    - R & Python -> Quarto
+
+## R Markdownとの違い
+
+- 様々なプログラム言語に対応（e.g., R、Python、Julia）
+
+    - QuartoはRStudio外でも使いやすい
+
+- Quartoは単体のツール
+
+    - R Markdownでは、distill -> website、bookdown -> 本, revealjs -> スライド
+
+    - Quartoは以上を一つにまとめている
+
+        - 長期的にパッケージ管理がしやすい
+
+
+## R Markdownとの違い
 - PositronとQuarto、RStudioとR Markdown
 
-    - R MarkdownはRStudio内で完結するのが快適。QuartoはVSコードやJupyter、PositronでもOK!
+    - R MarkdownはRStudio内で完結するのが快適（Pythonが使えないわけではない）
+    
+    - QuartoはVSコードやJupyter、PositronでもOK!
 
-- Rしか使わないのであれば、R MarkdownのままでOK！
+## R Markdownの今後
 
-    - チャンクの書き方など微妙に違いはあるが、比較的スムーズに移行できるので、お勧めします！
+- RStudioと同様、今後も生き残るらしいのでご安心を
+
+    - R Markdownに満足しているのであれば、急いでQuartoに変える必要もない
+
+::: {.callout-note}
+R Markdown is not going away! 
+R Markdown is used extensively and continues to work well. It will continue to be actively supported.
+— [FAQ for R Markdown Users](https://quarto.org/docs/faq/rmarkdown.html?utm_source=chatgpt.com#is-r-markdown-going-away-will-my-r-markdown-documents-continue-to-work)
+:::
+
+## PositronでQuartoを触ってみましょう
+
+- 左上のNewをクリック -> ［New File...］ -> ［Quarto Document］をクリック
+
+- キーボードから手を放したくないのであれば、
+
+    - [Ctrl] + [P] を押す -> [>]を入力 -> [Create New File...] -> ［New File...］ -> ［Quarto Document］
+
+## R Markdownファイルも開きましょう
+
+- 残念ながら、.Rmdファイルのテンプレート選択画面はない
+
+    - RStudioで作成した.Rmdファイルを開きます
+
+## R Markdownとの記法の違い
+
+### YAML
+- 出力形式の指定
+
+    - Quarto: format
+
+        - HTML: html
+
+    - R Markdown: output
+
+        - HTML: html_document
+
+![](fig/yaml.png)
+
+## YAML
+
+- R Markdownに合わせて書くと...
+
+    - ```date: now```でもよい
+
+``` {.r code-line-numbers="3-5"}
+title: "Untitled"
+author: "Masato Terai"
+date: today          
+format: html
+```
+
+## コードチャンク
+- オプションの指定の仕方
+
+    - Quartoの方が可読性が高い
+
+- R Markdown：チャンクで指定
+```markdown
+``` {.r echo = F, fig.dim = c(10, 4.5)}
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg, color = am)) +
+  geom_point()
+```
+
+- Quarto：チャンク**内**で指定
+```{.r code-line-numbers="1-3"}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 4.5
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg, color = am)) +
+  geom_point()
+```
+
+## R Markdownとの記法の違い
+
+::: {.callout-important}
+Quartoでは、R Markdownよりも記法が少し厳しい印象です。
+
+例えば、```echo = F```と書いたり、":" の後に半角スペースを入れないと怒られます。
+:::
+
+- 網羅的な記法は公式の資料を参照してください
+
+    - [Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)
+
+## HTMLファイルに書き出す
+
+- Quarto -> ［Preview］もしくは［口 Render on Save］に✔を入れてから保存
+
+    - TERMINALも可能
+    
+        - ```quarto preview ファイル名.qmd```
+        
+        - ```quarto render ファイル名.qmd```
+
+- R Markdown -> 上記の方法もしくは［Preview］に［Render Document With R Markdown］
+
+## ちなみに
+
+::: {.callout-caution}
+TERMINALでRenderすることも可能ですが、YAMLでengineを定義していない場合、エラーになる場合があります。
+
+ 例えば、Python3がないと、TERMINAL操作ではRenderできません。おそらくデフォルトでJupyter設定になっています。
+
+> Starting python3 kernel...Python Unable to locate an installed version of Python 3. Install Python 3 from https://www.python.org/downloads/
+
+従って、RユーザーはYAMLで以下のようにKnitrを明示しておくといいかもしれません。
+```engine: knitr```
+:::
 
 # まとめ
 
@@ -305,18 +464,16 @@ boxplot(dat$mpg, dat$cyl)
 
 - データの分布を一覧で出せる
 
+- プロットの一覧が見れる
+
+- 手をキーボードから離す頻度が減る
+
 ## Positronがお勧めな理由
 
 ### 2. Git操作がより簡単に
 - Gitが使いやすい。RStudioよりGUI操作の選択肢が多い
 
 - Githubとの連携が楽
-
-- GitやGithubをこれから勉強したい方へ
-
-    - [RStudioとGitの連携によるバージョン管理](https://www.jstage.jst.go.jp/article/methodologysig/17/0/17_17.3/_article/-char/ja/)
-
-    - [RStudio ユーザーのための GitHub 入門](https://www.jstage.jst.go.jp/article/methodologysig/18/0/18_18.2/_article/-char/ja/)
 
 ## Positronがお勧めな理由
 
@@ -325,7 +482,7 @@ boxplot(dat$mpg, dat$cyl)
 
 - 個人情報などの管理などには気を付けて！
 
-## Positronがお勧めでない理由
+## Positronをお勧めしない理由
 
 - RStudioに比べるとまだ不安定
 
@@ -333,22 +490,21 @@ boxplot(dat$mpg, dat$cyl)
 
 - R言語だけならRStudioで十分
 
-## わさもん
-- 熊本弁：新しいもの好き
-
-    - あん人はわさもんたい（あの人は新しいもの好きだね）
-
 ## Positronに移行しないとだめ！とは思わない
 
-- 個人的に使っている理由として、
+- Positronへ乗り換えた個人的理由として、
 
-    - Positronの将来に賭けている
+    - わさもんだから（熊本弁：新しいもの好き）
     
-    - アーリーアダプター（Positron、Quarto）になりたい
-
     - データの外観機能が気に入っている
 
-    - Pythonをもっと触っていきたい
+    - Pythonをもっと習得したいが、言語によってIDEを変えたくないから
+
+# おしまい
+
+Enjoy
+
+(画像を挿入)
 
 # 参考資料
 - [【AI全部載せできるRのデータ分析環境はこれ】Positron Assistantの導入ガイド](https://note.com/mitti1210/n/n87a4ff6fc9c3)
@@ -356,3 +512,5 @@ boxplot(dat$mpg, dat$cyl)
 - [Positronって実際どうなの？RStudioユーザーがCursorと比較しながら触ってみた](https://note.com/mitti1210/n/nb41e77d49f51)
 
 - [Settings, Keybindings, and Extensions for Positron](https://christophertkenny.com/posts/2024-06-29-positron-settings/#extensions)
+
+- [I'm an R user: Quarto or R Markdown?](https://www.jumpingrivers.com/blog/quarto-rmarkdown-comparison/)
