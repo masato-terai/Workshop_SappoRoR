@@ -35,9 +35,9 @@ title-slide-attributes:
 
 ## 講師プロフィール
 
-- 寺井雅人（大谷翔平世代）
+- 寺井雅人（Masato Terai）
 
-    - 熊本出身で、愛知在住
+    - 熊本出身、名古屋在住
 
 - 大学教員（助教）
 
@@ -210,10 +210,36 @@ title-slide-attributes:
 
 - Assistant Layout
 
-## Search Bar
-- 機能を説明する
+## コマンドパレット
+- VS Codeからの機能
 
-- https://positron.posit.co/command-palette.html
+    - キーボードから手を離さずに作業できる
+
+- ショートカット（コマンドモード）
+
+- 大体のキーワードで検索してくれる（= 部分一致）
+
+    - Windows:  [Ctrl] + [Shift] + [P]
+    - Mac: [command] + [shift] + [P]
+
+## コマンドパレット
+- [?]を入れると様々なコマンドを一覧可能
+
+- おすすめ
+
+    - キーワード検索
+
+        - コマンドパレットで[%]
+
+    - ファイルを開く
+
+        - Windows: [Ctrl] + [P]
+        - Mac: [command] + [P]
+
+    - 開いているファイルの特定の行にジャンプ
+
+        - Windows: [Ctrl] + [G]
+        - Mac: [command] + [G]
 
 # アピールポイント
 
@@ -257,7 +283,7 @@ boxplot(dat$mpg, dat$cyl)
     - [RStudio ユーザーのための GitHub 入門](https://www.jstage.jst.go.jp/article/methodologysig/18/0/18_18.2/_article/-char/ja/)
 
 
-## Preview機能
+## プレビュー機能
 
 - Previewを見ながらqmdやRmdファイルを編集できる
 
@@ -284,7 +310,7 @@ boxplot(dat$mpg, dat$cyl)
 
 - フォントの大きさの変更：左下の⚙をクリック → [Settings] → [Text Editor] → [Font Size]
 
-# 拡張機能（寺井おすすめ）
+# おすすめ拡張機能
 
 ## vscode-pdf
 - Positron内でPDFを確認できる
@@ -500,11 +526,10 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 
     - Pythonをもっと習得したいが、言語によってIDEを変えたくないから
 
-# おしまい
+# おしまい {background="#9ac7ffff" text="white"}
 
-Enjoy
+Enjoy!
 
-(画像を挿入)
 
 # 参考資料
 - [【AI全部載せできるRのデータ分析環境はこれ】Positron Assistantの導入ガイド](https://note.com/mitti1210/n/n87a4ff6fc9c3)
@@ -514,3 +539,5 @@ Enjoy
 - [Settings, Keybindings, and Extensions for Positron](https://christophertkenny.com/posts/2024-06-29-positron-settings/#extensions)
 
 - [I'm an R user: Quarto or R Markdown?](https://www.jumpingrivers.com/blog/quarto-rmarkdown-comparison/)
+
+# スライドの最後です
