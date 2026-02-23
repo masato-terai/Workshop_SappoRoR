@@ -85,40 +85,28 @@ title-slide-attributes:
   > — [Positron GitHub Releases[Jul 3, 2025]](https://github.com/posit-dev/positron/releases?page=2)
 
 
-## RStudioから乗り換えるべき？？
-
-- RStudioが消えるわけではない（開発が止まったりするわけではない）
-    
-    - Positronよりも、RStudio（10年以上の歴史）の方がより安定したソフトウェア
-
-- R, RStudioにこれから触れる人は、Positronがお勧めらしい
-
-    - 既にRStudioをガンガン使っていて、満足しているならRStudioのままでOK!
-
 ## こんな人にお勧めかも（by 公式）
-- VS Code を使ってデータ分析（Python や R）をしているが、試しにコードを動かしたり、変数やデータを中身まで確認したり、グラフを操作したり、Shiny・Streamlit・FastAPI のようなデータアプリを作ったりするには、もう少し専用の便利機能がほしい人。
+- VS Codeに比べ、もう少しデータ分析専用の便利機能がほしい人
 
-- JupyterLab やオンラインのノートブック環境でデータ分析（Python や R）をしていて、ノートブックは使い続けたいが、もっと高機能で本格的な IDE を使いたい人。
+- JupyterLabなどを使い続けたいが、もっと高機能で本格的な IDE を使いたい人
 
 - **RStudio を使っていて、IDE をもっと自分好みにカスタマイズしたり、機能を拡張したりしたい人。**
 
-- Python や R だけでなく、Rust、C++、JavaScript、Lua などの言語も使って日常的にデータ分析やパッケージ開発をしている人。
+- Python や R だけでなく、Rust、C++、JavaScript、Lua などの言語も使って日常的にデータ分析やパッケージ開発をしている人
 
-- データ分析に特化した強力な AI 機能を、モダンで拡張性の高い IDE の中で使いたい人。
+- データ分析に特化した強力な AI 機能を、モダンで拡張性の高い IDE の中で使いたい人
 
-## もっと自分好みにカスタマイズしたり、機能を拡張する
+## カスタマイズと機能拡張とは：
 
 - 拡張機能
 
     - VS Codeのほとんどの拡張機能を使える
 
-- Gitコマンド
-
-    - VS CodeレベルのGUI
-
 - AIアシスト
 
     - 様々なLLMを選べる
+
+    - Databotによるノーコード開発
 
 ## RStudioとの主な違い
 - Rprojがない！
@@ -127,7 +115,7 @@ title-slide-attributes:
 
     - 詳しい解説：[The Rproj File](https://positron.posit.co/migrate-rstudio-rproj.html)
 
-- RMarkdown、Quartoの書き出しが可能だが、いわゆる"Knit"ボタンがない
+- RMarkdown、Quartoの書き出しが可能だが、いわゆる "Knit"ボタンがない
 
     - qmdファイルの場合、"Preview"や"Render on Save"で書きだす
 
@@ -136,32 +124,39 @@ title-slide-attributes:
 ## RStudioとの主な違い
 - 現時点では、RStudioとは異なり、実行結果は、コンソールペインでしか確認できない
 
-    ```However, we are actively enhancing our Positron-native notebook UI that will provide inline outputs for Python or R sessions.```
+  > However, we are actively enhancing our Positron-native notebook UI that will provide inline outputs for Python or R sessions. 
+  >
+  > — [Frequently Asked Questions](https://positron.posit.co/faqs.html)
 
 - Rがクラッシュしても、Positron自体は生き残ることが多い
 
-- バージョンの切り替えも、コンソールの再起動だけでよい
+- RやPythonのバージョンの切り替えも、コンソールの再起動だけでよい
 
 ## AI-Powered Data Science
-- Positronは、RStudioに比べ、より多くのAIサポートを受けることができる
+- PositronはRStudioに比べより多くのAIサポートを受けられる
 
     - **Databot**機能など、ノーコードでの分析が可能に
 
-        - [公式Youtube（英語）](https://youtu.be/TrN-FMcOsOA?si=2YYNA2_Lv35QXwyD)
+::: {.callout-note}
+AIサポートはPositronの推しポイントですが、個人的に使用してませんし、既に解説記事が複数あるので割愛しました。詳しくは以下のYoutubeや参考文献を参考にしてください。
+
+- [公式Youtube（英語）：https://youtu.be/TrN-FMcOsOA?si=2YYNA2_Lv35QXwyD](https://youtu.be/TrN-FMcOsOA?si=2YYNA2_Lv35QXwyD)
+:::
 
 ## つまり
+::: incremental
+- RStudioの機能をそのままに新たな機能を拡張したわけではない
 
-- RStudioの機能をそのままに、新たな機能を拡張したわけではない
+    - RStudioにしかない機能もある
 
-    - RStudioにしかない機能もあったりする
-
-- RStudio: Rに特化した完成度の高い開発環境
+- RStudio: [Rに特化した完成度の高い]{.underline}開発環境
 
     - RだけならRStudio
 
-- Positron：多言語の将来性のある開発環境
+- Positron：[多言語の将来性のある]{.underline}開発環境
 
-    - R + Python、今後は多言語もならPositron
+    - 多言語ならPositron
+:::
 
 # 実際に触ってみましょう{background="#1F4E79"}
 
@@ -173,7 +168,7 @@ title-slide-attributes:
 
 - それぞれのOSに合うインストーラーを選ぶ
 
-    - [リンク](https://positron.posit.co/install.html)
+    - [インストール用リンク](https://positron.posit.co/install.html)
 
 ## レイアウト
 
@@ -203,9 +198,11 @@ title-slide-attributes:
 
 - Side-By-Side Layout：RStudioにより近い
 
-- Notebook Layout：コメント追加
+- Notebook Layout：Side-By-Side LayoutマイナスVARIABLESペイン
 
-- Assistant Layout：コメント追加
+    - ソースコードの下にコンソールが配置される
+
+- Assistant Layout：Stacked Layoutとあまり違いが分からない。Primary Side Barが少し広い。
 
 ## コマンドパレット
 - VS Codeからの機能
@@ -238,7 +235,7 @@ title-slide-attributes:
         - Windows: [Ctrl] + [G]
         - Mac: [command] + [G]
 
-## アピールポイント
+# アピールポイント{background="#1F4E79"}
 
 ## データの確認機能
 
@@ -286,13 +283,13 @@ boxplot(dat$mpg, dat$cyl)
 
 - 差分の確認はRStudioの方がやや見やすい
 
-## ちなみに
+::: {.callout-note}
 - GitやGitHubをこれから勉強したい方へ
 
-    - [RStudioとGitの連携によるバージョン管理](https://www.jstage.jst.go.jp/article/methodologysig/17/0/17_17.3/_article/-char/ja/)
+    - [寺井雅人. (2024). RStudio と Git の連携によるバージョン管理. メソドロジー研究部会報告論集, 17, 35-52.](https://www.jstage.jst.go.jp/article/methodologysig/17/0/17_17.3/_article/-char/ja/)
 
-    - [RStudio ユーザーのための GitHub 入門](https://www.jstage.jst.go.jp/article/methodologysig/18/0/18_18.2/_article/-char/ja/)
-
+    - [寺井雅人. (2025). RStudio ユーザーのための GitHub 入門. メソドロジー研究部会報告論集, 18, 27-41.](https://www.jstage.jst.go.jp/article/methodologysig/18/0/18_18.2/_article/-char/ja/)
+:::
 
 ## プレビュー機能
 
@@ -391,11 +388,11 @@ boxplot(dat$mpg, dat$cyl)
 
     - R Markdownに満足しているのであれば、Quartoに変える必要もない
 
-::: {.callout-note}
-R Markdown is not going away! 
-R Markdown is used extensively and continues to work well. It will continue to be actively supported.
-— [FAQ for R Markdown Users](https://quarto.org/docs/faq/rmarkdown.html?utm_source=chatgpt.com#is-r-markdown-going-away-will-my-r-markdown-documents-continue-to-work)
-:::
+>R Markdown is not going away! 
+>R Markdown is used extensively and continues to work well. It will continue to be actively supported.
+>
+>— [FAQ for R Markdown Users](https://quarto.org/docs/faq/rmarkdown.html?utm_source=chatgpt.com#is-r-markdown-going-away-will-my-r-markdown-documents-continue-to-work)
+
 
 # PositronでQuartoを触ってみましょう{background="#1F4E79"}
 
@@ -523,49 +520,58 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 
 # まとめ{background="#1F4E79"}
 
-## Positronがお勧めな理由
+## RStudioから乗り換えるべき？？
 
-### 1. データ分析のための補助機能
+::: incremental
+### 個人的にはお勧めだが、必須ではない 
+- RStudioが消えるわけではない（開発が止まったりするわけではない）
+    
+    - Positronよりも、RStudio（10年以上の歴史）の方がより安定したソフトウェア
 
-- データの分布を一覧で出せる
+- R, RStudioにこれから触れる人は、Positronがお勧めらしい
 
-- プロットの一覧が見れる
+    - 既にRStudioをガンガン使っていて、満足しているならRStudioのままでOK!
+:::
 
-- 手をキーボードから離す頻度が減る
-
-## Positronがお勧めな理由
-
-### 2. Git操作がより簡単に
-- Gitが使いやすい。RStudioよりGUI操作の選択肢が多い
-
-- Githubとの連携が楽
-
-## Positronがお勧めな理由
-
-### 3. AIのアシストをより受けられる
-- Databot機能などを活用すればほぼノーコードで分析が可能
-
-- 個人情報などの管理などには気を付けて！
-
-## Positronをお勧めしない理由
-
-- RStudioに比べるとまだ不安定
-
-- RStudioに慣れた人は最初戸惑うかも
-
-- R言語だけならRStudioで十分
-
-- 紙媒体の資料はまだない
-
-## Positronに移行しないとだめ！とは思わない
-
-- Positronへ乗り換えた個人的理由として、
+::: incremental
+## Positronへ乗り換えた個人的理由
 
     - わさもんだから（熊本弁：新しいもの好き）
     
     - データの外観機能が気に入っている
 
     - Pythonをもっと習得したいが、言語によってIDEを変えたくないから
+
+    - Positronの将来性に期待しているから
+:::
+
+## Positronを勧める理由
+
+### データ分析のための補助機能が豊富
+::: incremental
+- データの分布を一覧で出せる
+
+- プロットの一覧が見れる
+
+- 手をキーボードから離す頻度が減る
+
+- Git操作がより簡単に
+
+- AIのアシストをより受けられる
+    - Databot機能などを活用すればほぼノーコードで分析が可能
+:::
+
+## Positronを勧めない理由
+::: incremental
+- RStudioに慣れた人は最初戸惑う可能性大
+
+- R言語だけならRStudioで十分
+
+- 習得するためのサポートが少ない（特に日本語）
+
+    - 紙媒体の資料はまだない
+:::
+
 
 # 参考資料{background="#1F4E79"}
 - 💻：ウェブサイト

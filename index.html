@@ -206,7 +206,7 @@
 </div>
 </div>
 
-  <p class="date">2026-02-23 12:50:33</p>
+  <p class="date">2026-02-23 16:13:02</p>
 </section>
 <section>
 <section id="はじめに" class="title-slide slide level1 center" data-background="#1F4E79">
@@ -279,43 +279,27 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </blockquote></li>
 </ul>
 </section>
-<section id="rstudioから乗り換えるべき" class="slide level2">
-<h2>RStudioから乗り換えるべき？？</h2>
-<ul>
-<li><p>RStudioが消えるわけではない（開発が止まったりするわけではない）</p>
-<ul>
-<li>Positronよりも、RStudio（10年以上の歴史）の方がより安定したソフトウェア</li>
-</ul></li>
-<li><p>R, RStudioにこれから触れる人は、Positronがお勧めらしい</p>
-<ul>
-<li>既にRStudioをガンガン使っていて、満足しているならRStudioのままでOK!</li>
-</ul></li>
-</ul>
-</section>
 <section id="こんな人にお勧めかもby-公式" class="slide level2">
 <h2>こんな人にお勧めかも（by 公式）</h2>
 <ul>
-<li><p>VS Code を使ってデータ分析（Python や R）をしているが、試しにコードを動かしたり、変数やデータを中身まで確認したり、グラフを操作したり、Shiny・Streamlit・FastAPI のようなデータアプリを作ったりするには、もう少し専用の便利機能がほしい人。</p></li>
-<li><p>JupyterLab やオンラインのノートブック環境でデータ分析（Python や R）をしていて、ノートブックは使い続けたいが、もっと高機能で本格的な IDE を使いたい人。</p></li>
+<li><p>VS Codeに比べ、もう少しデータ分析専用の便利機能がほしい人</p></li>
+<li><p>JupyterLabなどを使い続けたいが、もっと高機能で本格的な IDE を使いたい人</p></li>
 <li><p><strong>RStudio を使っていて、IDE をもっと自分好みにカスタマイズしたり、機能を拡張したりしたい人。</strong></p></li>
-<li><p>Python や R だけでなく、Rust、C++、JavaScript、Lua などの言語も使って日常的にデータ分析やパッケージ開発をしている人。</p></li>
-<li><p>データ分析に特化した強力な AI 機能を、モダンで拡張性の高い IDE の中で使いたい人。</p></li>
+<li><p>Python や R だけでなく、Rust、C++、JavaScript、Lua などの言語も使って日常的にデータ分析やパッケージ開発をしている人</p></li>
+<li><p>データ分析に特化した強力な AI 機能を、モダンで拡張性の高い IDE の中で使いたい人</p></li>
 </ul>
 </section>
-<section id="もっと自分好みにカスタマイズしたり機能を拡張する" class="slide level2">
-<h2>もっと自分好みにカスタマイズしたり、機能を拡張する</h2>
+<section id="カスタマイズと機能拡張とは" class="slide level2">
+<h2>カスタマイズと機能拡張とは：</h2>
 <ul>
 <li><p>拡張機能</p>
 <ul>
 <li>VS Codeのほとんどの拡張機能を使える</li>
 </ul></li>
-<li><p>Gitコマンド</p>
-<ul>
-<li>VS CodeレベルのGUI</li>
-</ul></li>
 <li><p>AIアシスト</p>
 <ul>
-<li>様々なLLMを選べる</li>
+<li><p>様々なLLMを選べる</p></li>
+<li><p>Databotによるノーコード開発</p></li>
 </ul></li>
 </ul>
 </section>
@@ -327,7 +311,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>フォルダ = プロジェクト</p></li>
 <li><p>詳しい解説：<a href="https://positron.posit.co/migrate-rstudio-rproj.html">The Rproj File</a></p></li>
 </ul></li>
-<li><p>RMarkdown、Quartoの書き出しが可能だが、いわゆる”Knit”ボタンがない</p>
+<li><p>RMarkdown、Quartoの書き出しが可能だが、いわゆる “Knit”ボタンがない</p>
 <ul>
 <li><p>qmdファイルの場合、“Preview”や”Render on Save”で書きだす</p></li>
 <li><p>Rmdファイルの場合、“Preview”に、“Render Document With R Markdown”が表示される</p></li>
@@ -338,37 +322,53 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <h2>RStudioとの主な違い</h2>
 <ul>
 <li><p>現時点では、RStudioとは異なり、実行結果は、コンソールペインでしか確認できない</p>
-<p><code>However, we are actively enhancing our Positron-native notebook UI that will provide inline outputs for Python or R sessions.</code></p></li>
+<blockquote>
+<p>However, we are actively enhancing our Positron-native notebook UI that will provide inline outputs for Python or R sessions.</p>
+<p>— <a href="https://positron.posit.co/faqs.html">Frequently Asked Questions</a></p>
+</blockquote></li>
 <li><p>Rがクラッシュしても、Positron自体は生き残ることが多い</p></li>
-<li><p>バージョンの切り替えも、コンソールの再起動だけでよい</p></li>
+<li><p>RやPythonのバージョンの切り替えも、コンソールの再起動だけでよい</p></li>
 </ul>
 </section>
 <section id="ai-powered-data-science" class="slide level2">
 <h2>AI-Powered Data Science</h2>
 <ul>
-<li><p>Positronは、RStudioに比べ、より多くのAIサポートを受けることができる</p>
+<li><p>PositronはRStudioに比べより多くのAIサポートを受けられる</p>
 <ul>
-<li><p><strong>Databot</strong>機能など、ノーコードでの分析が可能に</p>
-<ul>
-<li><a href="https://youtu.be/TrN-FMcOsOA?si=2YYNA2_Lv35QXwyD">公式Youtube（英語）</a></li>
-</ul></li>
+<li><strong>Databot</strong>機能など、ノーコードでの分析が可能に</li>
 </ul></li>
 </ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>AIサポートはPositronの推しポイントですが、個人的に使用してませんし、既に解説記事が複数あるので割愛しました。詳しくは以下のYoutubeや参考文献を参考にしてください。</p>
+<ul>
+<li><a href="https://youtu.be/TrN-FMcOsOA?si=2YYNA2_Lv35QXwyD">公式Youtube（英語）：https://youtu.be/TrN-FMcOsOA?si=2YYNA2_Lv35QXwyD</a></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="つまり" class="slide level2">
 <h2>つまり</h2>
 <ul>
-<li><p>RStudioの機能をそのままに、新たな機能を拡張したわけではない</p>
+<li class="fragment"><p>RStudioの機能をそのままに新たな機能を拡張したわけではない</p>
 <ul>
-<li>RStudioにしかない機能もあったりする</li>
+<li class="fragment">RStudioにしかない機能もある</li>
 </ul></li>
-<li><p>RStudio: Rに特化した完成度の高い開発環境</p>
+<li class="fragment"><p>RStudio: <u>Rに特化した完成度の高い</u>開発環境</p>
 <ul>
-<li>RだけならRStudio</li>
+<li class="fragment">RだけならRStudio</li>
 </ul></li>
-<li><p>Positron：多言語の将来性のある開発環境</p>
+<li class="fragment"><p>Positron：<u>多言語の将来性のある</u>開発環境</p>
 <ul>
-<li>R + Python、今後は多言語もならPositron</li>
+<li class="fragment">多言語ならPositron</li>
 </ul></li>
 </ul>
 </section></section>
@@ -386,7 +386,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 <li><p>それぞれのOSに合うインストーラーを選ぶ</p>
 <ul>
-<li><a href="https://positron.posit.co/install.html">リンク</a></li>
+<li><a href="https://positron.posit.co/install.html">インストール用リンク</a></li>
 </ul></li>
 </ul>
 </section>
@@ -432,8 +432,11 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <ul>
 <li><p>Stacked Layout：デフォルト</p></li>
 <li><p>Side-By-Side Layout：RStudioにより近い</p></li>
-<li><p>Notebook Layout：コメント追加</p></li>
-<li><p>Assistant Layout：コメント追加</p></li>
+<li><p>Notebook Layout：Side-By-Side LayoutマイナスVARIABLESペイン</p>
+<ul>
+<li>ソースコードの下にコンソールが配置される</li>
+</ul></li>
+<li><p>Assistant Layout：Stacked Layoutとあまり違いが分からない。Primary Side Barが少し広い。</p></li>
 </ul>
 </section>
 <section id="コマンドパレット" class="slide level2">
@@ -473,9 +476,11 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul></li>
 </ul>
-</section>
-<section id="アピールポイント" class="slide level2">
-<h2>アピールポイント</h2>
+</section></section>
+<section>
+<section id="アピールポイント" class="title-slide slide level1 center" data-background="#1F4E79">
+<h1>アピールポイント</h1>
+
 </section>
 <section id="データの確認機能" class="slide level2">
 <h2>データの確認機能</h2>
@@ -529,16 +534,25 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>連携のしやすさ：大きな差はない</p></li>
 <li><p>差分の確認はRStudioの方がやや見やすい</p></li>
 </ul>
-</section>
-<section id="ちなみに-1" class="slide level2">
-<h2>ちなみに</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
 <ul>
 <li><p>GitやGitHubをこれから勉強したい方へ</p>
 <ul>
-<li><p><a href="https://www.jstage.jst.go.jp/article/methodologysig/17/0/17_17.3/_article/-char/ja/">RStudioとGitの連携によるバージョン管理</a></p></li>
-<li><p><a href="https://www.jstage.jst.go.jp/article/methodologysig/18/0/18_18.2/_article/-char/ja/">RStudio ユーザーのための GitHub 入門</a></p></li>
+<li><p><a href="https://www.jstage.jst.go.jp/article/methodologysig/17/0/17_17.3/_article/-char/ja/">寺井雅人. (2024). RStudio と Git の連携によるバージョン管理. メソドロジー研究部会報告論集, 17, 35-52.</a></p></li>
+<li><p><a href="https://www.jstage.jst.go.jp/article/methodologysig/18/0/18_18.2/_article/-char/ja/">寺井雅人. (2025). RStudio ユーザーのための GitHub 入門. メソドロジー研究部会報告論集, 18, 27-41.</a></p></li>
 </ul></li>
 </ul>
+</div>
+</div>
+</div>
 </section>
 <section id="プレビュー機能" class="slide level2">
 <h2>プレビュー機能</h2>
@@ -663,19 +677,10 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li>R Markdownに満足しているのであれば、Quartoに変える必要もない</li>
 </ul></li>
 </ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>R Markdown is not going away! R Markdown is used extensively and continues to work well. It will continue to be actively supported. — <a href="https://quarto.org/docs/faq/rmarkdown.html?utm_source=chatgpt.com#is-r-markdown-going-away-will-my-r-markdown-documents-continue-to-work">FAQ for R Markdown Users</a></p>
-</div>
-</div>
-</div>
+<blockquote>
+<p>R Markdown is not going away! R Markdown is used extensively and continues to work well. It will continue to be actively supported.</p>
+<p>— <a href="https://quarto.org/docs/faq/rmarkdown.html?utm_source=chatgpt.com#is-r-markdown-going-away-will-my-r-markdown-documents-continue-to-work">FAQ for R Markdown Users</a></p>
+</blockquote>
 </section></section>
 <section>
 <section id="positronでquartoを触ってみましょう" class="title-slide slide level1 center" data-background="#1F4E79">
@@ -799,7 +804,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p><a href="https://rstudio.github.io/cheatsheets/html/quarto.html">公式のチートシートはこのリンクから</a></p></li>
 </ul>
 </section>
-<section id="ちなみに-2" class="slide level2">
+<section id="ちなみに-1" class="slide level2">
 <h2>ちなみに</h2>
 <div class="callout callout-caution callout-titled callout-style-default">
 <div class="callout-body">
@@ -820,7 +825,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </div>
 </div>
 </section>
-<section id="ちなみに-3" class="slide level2">
+<section id="ちなみに-2" class="slide level2">
 <h2>ちなみに</h2>
 <ul>
 <li><p>このスライドもQuartoで作成しています。</p></li>
@@ -836,48 +841,54 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <h1>まとめ</h1>
 
 </section>
-<section id="positronがお勧めな理由" class="slide level2">
-<h2>Positronがお勧めな理由</h2>
-<h3 id="データ分析のための補助機能">1. データ分析のための補助機能</h3>
+<section id="rstudioから乗り換えるべき" class="slide level2">
+<h2>RStudioから乗り換えるべき？？</h2>
+<section id="個人的にはお勧めだが必須ではない" class="incremental">
+<h3>個人的にはお勧めだが、必須ではない</h3>
 <ul>
-<li><p>データの分布を一覧で出せる</p></li>
-<li><p>プロットの一覧が見れる</p></li>
-<li><p>手をキーボードから離す頻度が減る</p></li>
+<li><p>RStudioが消えるわけではない（開発が止まったりするわけではない）</p>
+<ul>
+<li>Positronよりも、RStudio（10年以上の歴史）の方がより安定したソフトウェア</li>
+</ul></li>
+<li><p>R, RStudioにこれから触れる人は、Positronがお勧めらしい</p>
+<ul>
+<li>既にRStudioをガンガン使っていて、満足しているならRStudioのままでOK!</li>
+</ul></li>
 </ul>
 </section>
-<section id="positronがお勧めな理由-1" class="slide level2">
-<h2>Positronがお勧めな理由</h2>
-<h3 id="git操作がより簡単に">2. Git操作がより簡単に</h3>
+</section>
+<section id="positronへ乗り換えた個人的理由" class="slide level2 incremental">
+<h2>Positronへ乗り換えた個人的理由</h2>
+<pre><code>- わさもんだから（熊本弁：新しいもの好き）
+
+- データの外観機能が気に入っている
+
+- Pythonをもっと習得したいが、言語によってIDEを変えたくないから
+
+- Positronの将来性に期待しているから</code></pre>
+</section>
+<section id="positronを勧める理由" class="slide level2">
+<h2>Positronを勧める理由</h2>
+<h3 id="データ分析のための補助機能が豊富">データ分析のための補助機能が豊富</h3>
 <ul>
-<li><p>Gitが使いやすい。RStudioよりGUI操作の選択肢が多い</p></li>
-<li><p>Githubとの連携が楽</p></li>
+<li class="fragment"><p>データの分布を一覧で出せる</p></li>
+<li class="fragment"><p>プロットの一覧が見れる</p></li>
+<li class="fragment"><p>手をキーボードから離す頻度が減る</p></li>
+<li class="fragment"><p>Git操作がより簡単に</p></li>
+<li class="fragment"><p>AIのアシストをより受けられる</p>
+<ul>
+<li class="fragment">Databot機能などを活用すればほぼノーコードで分析が可能</li>
+</ul></li>
 </ul>
 </section>
-<section id="positronがお勧めな理由-2" class="slide level2">
-<h2>Positronがお勧めな理由</h2>
-<h3 id="aiのアシストをより受けられる">3. AIのアシストをより受けられる</h3>
+<section id="positronを勧めない理由" class="slide level2">
+<h2>Positronを勧めない理由</h2>
 <ul>
-<li><p>Databot機能などを活用すればほぼノーコードで分析が可能</p></li>
-<li><p>個人情報などの管理などには気を付けて！</p></li>
-</ul>
-</section>
-<section id="positronをお勧めしない理由" class="slide level2">
-<h2>Positronをお勧めしない理由</h2>
+<li class="fragment"><p>RStudioに慣れた人は最初戸惑う可能性大</p></li>
+<li class="fragment"><p>R言語だけならRStudioで十分</p></li>
+<li class="fragment"><p>習得するためのサポートが少ない（特に日本語）</p>
 <ul>
-<li><p>RStudioに比べるとまだ不安定</p></li>
-<li><p>RStudioに慣れた人は最初戸惑うかも</p></li>
-<li><p>R言語だけならRStudioで十分</p></li>
-<li><p>紙媒体の資料はまだない</p></li>
-</ul>
-</section>
-<section id="positronに移行しないとだめとは思わない" class="slide level2">
-<h2>Positronに移行しないとだめ！とは思わない</h2>
-<ul>
-<li><p>Positronへ乗り換えた個人的理由として、</p>
-<ul>
-<li><p>わさもんだから（熊本弁：新しいもの好き）</p></li>
-<li><p>データの外観機能が気に入っている</p></li>
-<li><p>Pythonをもっと習得したいが、言語によってIDEを変えたくないから</p></li>
+<li class="fragment">紙媒体の資料はまだない</li>
 </ul></li>
 </ul>
 </section></section>
@@ -942,7 +953,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Published: 2026-02-13, Last update: 2026-02-23 12:50:33, Time Zone: Asia/Tokyo</p>
+<p>Published: 2026-02-13, Last update: 2026-02-23 16:13:02, Time Zone: Asia/Tokyo</p>
 </div>
 </div></div>
 
