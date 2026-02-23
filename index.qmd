@@ -202,13 +202,13 @@ title-slide-attributes:
 :::
 
 # レイアウトの指定
-- Stacked Layout:デフォルト
+- Stacked Layout：デフォルト
 
 - Side-By-Side Layout：RStudioにより近い
 
-- Notebook Layout
+- Notebook Layout：コメント追加
 
-- Assistant Layout
+- Assistant Layout：コメント追加
 
 # コマンドパレット
 - VS Codeからの機能
@@ -243,7 +243,7 @@ title-slide-attributes:
 
 # アピールポイント
 
-# 便利なデータの確認機能
+# データの確認機能
 
 - データの分布や、欠損値の割合などを確認できる
 
@@ -253,8 +253,10 @@ title-slide-attributes:
 dat <- airquality
 ```
 
-# フィルター機能
-- RStudioよりもより詳細
+- 画像を確認
+
+## フィルター機能
+- RStudioに比べ、より詳細な設定が可能
 
     ![](fig/filter.png)
 
@@ -293,19 +295,11 @@ boxplot(dat$mpg, dat$cyl)
 
 # ミニマップ機能（全体を俯瞰）
 
-- スクロールバーで右クリック → [Minimap]
+- スクロールバーの上で右クリック → [Minimap]をクリック
 
-    - RStudioのOutline機能はないのが残念。その代用として使用
+    - RStudioのOutline機能はないので、その代用として使用
 
-- RStudioとPositronのそれぞれの画像を並べる
-
-## 入力補完機能
-
-- コード（RStudioでもできるがより選択肢が多い）
-
-- ファイルパス（RStudioではできない）
-
-- それぞれの例の画像を載せる
+![**左：RStudio、右：Positron**](fig/minimap.png)
 
 # テーマ・フォントの変更
 - テーマの変更：左下の⚙をクリック → [Themes] → [Color Theme]
