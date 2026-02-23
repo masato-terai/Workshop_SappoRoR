@@ -30,7 +30,6 @@ title-slide-attributes:
 ---
 
 # Todo
-- 他からリンクで引っ張ってきている個所は、引用をかく
 - Title Slideは個別で画像を入れる
 
 # 講師プロフィール
