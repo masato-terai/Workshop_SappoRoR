@@ -194,7 +194,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="fig/title_image.png" data-background-opacity="0.15" data-background-size="contain" class="quarto-title-block center">
+<section id="title-slide" data-background-image="fig/title_image.png" data-background-opacity="0.15" data-background-size="cover" class="quarto-title-block center">
   <h1 class="title">Positron入門!</h1>
   <p class="subtitle">Rユーザーのための次世代IDE</p>
 
@@ -206,17 +206,15 @@
 </div>
 </div>
 
-  <p class="date">2026-02-23 11:09:02</p>
+  <p class="date">2026-02-23 12:08:58</p>
 </section>
-<section id="todo" class="title-slide slide level1 center">
-<h1>Todo</h1>
-<ul>
-<li>Title Slideは個別で画像を入れる</li>
-</ul>
-</section>
+<section>
+<section id="はじめに" class="title-slide slide level1 center" data-background="#3E8EDE">
+<h1>はじめに</h1>
 
-<section id="講師プロフィール" class="title-slide slide level1 center">
-<h1>講師プロフィール</h1>
+</section>
+<section id="自己紹介" class="slide level2">
+<h2>自己紹介</h2>
 <ul>
 <li><p>寺井雅人（Masato Terai）</p>
 <ul>
@@ -232,9 +230,8 @@
 <p><img data-src="fig/masa.jpg" width="300"></p>
 </div>
 </section>
-
-<section id="私とrrコミュニティ" class="title-slide slide level1 center">
-<h1>私とR、Rコミュニティ</h1>
+<section id="私とrrコミュニティ" class="slide level2">
+<h2>私とR、Rコミュニティ</h2>
 <ul>
 <li><p>Rユーザー歴8年</p>
 <ul>
@@ -247,18 +244,16 @@
 </ul></li>
 </ul>
 </section>
-
-<section id="想定しているユーザー" class="title-slide slide level1 center">
-<h1>想定しているユーザー</h1>
+<section id="想定している聴衆の方" class="slide level2">
+<h2>想定している聴衆の方</h2>
 <ul>
 <li><p>Rをメインで使うもしくはR時々Pythonの方</p></li>
 <li><p>パッケージ開発というより、データ分析などを主な用途としている方</p></li>
 <li><p>Visual Studio Codeより、RStudioに慣れ親しんでいる方</p></li>
 </ul>
 </section>
-
-<section id="今回の内容" class="title-slide slide level1 center">
-<h1>今回の内容</h1>
+<section id="今回の内容" class="slide level2">
+<h2>今回の内容</h2>
 <ul>
 <li><p><strong>後で目次を挿入</strong></p></li>
 <li><p>AIアシストやrenv、コマンドラインGitは触れない</p>
@@ -266,8 +261,7 @@
 <li>AIアシストのおすすめ記事：<a href="https://zenn.dev/uribo/articles/7dbc83e4bbfcc0">Positron Assistant: データサイエンティスト向けのAIアシスタント機能</a></li>
 </ul></li>
 </ul>
-</section>
-
+</section></section>
 <section id="positronとは" class="title-slide slide level1 center">
 <h1>Positronとは</h1>
 <ul>
@@ -384,8 +378,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul>
 </section>
 
-<section id="とりあえず触ってみよう" class="title-slide slide level1 center">
-<h1>とりあえず触ってみよう</h1>
+<section id="実際に触ってみましょう" class="title-slide slide level1 center" data-background="#3E8EDE">
+<h1>実際に触ってみましょう</h1>
 
 </section>
 
@@ -501,12 +495,9 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <h1>データの確認機能</h1>
 <ul>
 <li><p>データの分布や、欠損値の割合などを確認できる</p></li>
-<li><p>以下のコードをRunして、VARIABLESで確認してみてください。</p></li>
+<li><p>以下のコードをRunして、VARIABLESで確認</p></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>dat <span class="ot">&lt;-</span> airquality</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>画像を確認</li>
-</ul>
 </section>
 <section id="フィルター機能" class="slide level2">
 <h2>フィルター機能</h2>
@@ -518,11 +509,21 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <section id="作成した図を確認可能" class="title-slide slide level1 center">
 <h1>作成した図を確認可能</h1>
 <ul>
-<li>セッション内で作成した図が表示されており、探しやすい</li>
+<li><p>セッション内で作成した図が表示されており、探しやすい</p>
+<ul>
+<li>以下のコードをRunして、PLOTSで確認</li>
+</ul></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>dat <span class="ot">&lt;-</span> mtars</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>dat <span class="ot">&lt;-</span> mtcars</span>
 <span id="cb2-2"><a href=""></a><span class="fu">plot</span>(dat<span class="sc">$</span>mpg)</span>
 <span id="cb2-3"><a href=""></a><span class="fu">boxplot</span>(dat<span class="sc">$</span>mpg, dat<span class="sc">$</span>cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+
+<section id="ちなみに" class="title-slide slide level1 center">
+<h1>ちなみに、、、</h1>
+<ul>
+<li>SESSIONタブで表示されている、VARIABLES、PLOTS、CONSOLEはドラッグ&amp;ドロップで表示の順番を変更できます。</li>
+</ul>
 </section>
 
 <section id="git操作" class="title-slide slide level1 center">
@@ -548,7 +549,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </section>
 
 <section>
-<section id="ちなみに" class="title-slide slide level1 center">
+<section id="ちなみに-1" class="title-slide slide level1 center">
 <h1>ちなみに</h1>
 <ul>
 <li><p>GitやGitHubをこれから勉強したい方へ</p>
@@ -629,14 +630,14 @@ Thank you to all our beta users who have been testing and giving feedback on our
 
 <img data-src="https://raw.githubusercontent.com/oderwat/vscode-indent-rainbow/master/assets/example.png" class="r-stretch quarto-figure-center"><p class="caption">Pic From indent-rainbow</p></section></section>
 <section>
-<section id="quartoとr-markdown" class="title-slide slide level1 center" data-background="#ffffffe8" data-background-image="fig/rmdqmd.png" data-background-size="600px" data-background-position="bottom right" data-background-repeat="no-repeat">
+<section id="quartoとr-markdown" class="title-slide slide level1 center" data-background="#3E8EDE">
 <h1>QuartoとR Markdown</h1>
 
 </section>
 <section id="概要" class="slide level2">
 <h2>概要</h2>
 <ul>
-<li><p>Pandocを基盤にした、研究・技術文書作成のための出版システム</p></li>
+<li><p>Pandocを基盤にした研究・技術文書作成のための出版システム</p></li>
 <li><p>Rに依存しない</p>
 <ul>
 <li><p>R -&gt; R Markdown</p></li>
@@ -645,6 +646,11 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>R &amp; Python -&gt; Quarto</p></li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="section" class="title-slide slide level1 center" data-background-image="fig/rmdqmd.png" data-background-size="600px" data-background-repeat="no-repeat">
+<h1></h1>
+
 </section>
 <section id="r-markdownとの違い" class="slide level2">
 <h2>R Markdownとの違い</h2>
@@ -662,9 +668,10 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul></li>
 </ul>
-</section>
-<section id="r-markdownとの違い-1" class="slide level2">
-<h2>R Markdownとの違い</h2>
+</section></section>
+<section>
+<section id="r-markdownとの違い-1" class="title-slide slide level1 center">
+<h1>R Markdownとの違い</h1>
 <ul>
 <li><p>PositronとQuarto、RStudioとR Markdown</p>
 <ul>
@@ -678,7 +685,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <ul>
 <li><p>RStudioと同様、今後も生き残るらしいのでご安心を</p>
 <ul>
-<li>R Markdownに満足しているのであれば、急いでQuartoに変える必要もない</li>
+<li>R Markdownに満足しているのであれば、Quartoに変える必要もない</li>
 </ul></li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -694,9 +701,9 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </div>
 </div>
 </div>
-</section>
-<section id="positronでquartoを触ってみましょう" class="slide level2">
-<h2>PositronでQuartoを触ってみましょう</h2>
+</section></section>
+<section id="positronでquartoを触ってみましょう" class="title-slide slide level1 center">
+<h1>PositronでQuartoを触ってみましょう</h1>
 <ul>
 <li><p>左上のNewをクリック -&gt; ［New File…］ -&gt; ［Quarto Document］をクリック</p></li>
 <li><p>キーボードから手を放したくないのであれば、</p>
@@ -705,10 +712,12 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section>
-<section id="r-markdownファイルも開きましょう" class="slide level2">
-<h2>R Markdownファイルも開きましょう</h2>
+
+<section>
+<section id="r-markdownファイルも開きましょう" class="title-slide slide level1 center">
+<h1>R Markdownファイルも開きましょう</h1>
 <ul>
-<li><p>残念ながら、.Rmdファイルのテンプレート選択画面はない</p>
+<li><p>残念ながら.Rmdファイルのテンプレート選択画面はない</p>
 <ul>
 <li>RStudioで作成した.Rmdファイルを開きます</li>
 </ul></li>
@@ -716,28 +725,28 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </section>
 <section id="r-markdownとの記法の違い" class="slide level2">
 <h2>R Markdownとの記法の違い</h2>
-<h3 id="yaml">YAML</h3>
+<h3 id="yaml出力形式の指定">YAML：出力形式の指定</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li><p>出力形式の指定</p>
-<ul>
-<li><p>Quarto: format</p>
-<ul>
-<li>HTML: html</li>
-</ul></li>
-<li><p>R Markdown: output</p>
-<ul>
-<li>HTML: html_document</li>
-</ul></li>
-</ul></li>
+<li>Quarto: <code>format</code></li>
 </ul>
-
-<img data-src="fig/yaml.png" class="r-stretch"></section>
-<section id="yaml-1" class="slide level2">
+</div><div class="column" style="width:50%;">
+<ul>
+<li>R Markdown: <code>output</code></li>
+</ul>
+</div><p><img data-src="fig/yaml.png"></p>
+</div>
+</section>
+<section id="yaml" class="slide level2">
 <h2>YAML</h2>
 <ul>
-<li><p>R Markdownに合わせて書くと…</p>
+<li><p>R Markdownに合わせる</p>
+<ul>
+<li><p><code>author</code>と<code>date</code>も追加</p>
 <ul>
 <li><code>date: now</code>でもよい</li>
+</ul></li>
 </ul></li>
 </ul>
 <div class="sourceCode" id="cb3" data-code-line-numbers="3-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>title<span class="sc">:</span> <span class="st">"Untitled"</span></span>
@@ -774,8 +783,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <span id="cb5-9"><a href=""></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section></section>
-<section id="r-markdownとの記法の違い-1" class="title-slide slide level1 center">
-<h1>R Markdownとの記法の違い</h1>
+<section id="その他" class="title-slide slide level1 center">
+<h1>その他</h1>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -802,19 +811,19 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <section id="htmlファイルに書き出す" class="title-slide slide level1 center">
 <h1>HTMLファイルに書き出す</h1>
 <ul>
-<li><p>Quarto -&gt; ［Preview］もしくは［口 Render on Save］に✔を入れてから保存</p>
+<li><p>Quarto：［Preview］もしくは［口 Render on Save］に✔を入れてから保存</p>
 <ul>
-<li><p>TERMINALも可能</p>
+<li><p>TERMINALでも可能</p>
 <ul>
 <li><p><code>quarto preview ファイル名.qmd</code></p></li>
 <li><p><code>quarto render ファイル名.qmd</code></p></li>
 </ul></li>
 </ul></li>
-<li><p>R Markdown -&gt; 上記の方法もしくは［Preview］に［Render Document With R Markdown］</p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/html/quarto.html">公式のチートシートもある</a></p></li>
+<li><p>R Markdown：上記の方法もしくは［Preview］で［Render Document With R Markdown］を選択</p></li>
+<li><p><a href="https://rstudio.github.io/cheatsheets/html/quarto.html">公式のチートシートはこのリンクから</a></p></li>
 </ul>
 </section>
-<section id="ちなみに-1" class="slide level2">
+<section id="ちなみに-2" class="slide level2">
 <h2>ちなみに</h2>
 <div class="callout callout-caution callout-titled callout-style-default">
 <div class="callout-body">
@@ -836,7 +845,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </div>
 </section></section>
 <section>
-<section id="まとめ" class="title-slide slide level1 center">
+<section id="まとめ" class="title-slide slide level1 center" data-background="#3E8EDE">
 <h1>まとめ</h1>
 
 </section>
@@ -885,11 +894,6 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section></section>
-<section id="おしまい" class="title-slide slide level1 center" data-background="#9ac7ffff" data-text="white">
-<h1>おしまい</h1>
-<p>Enjoy!</p>
-</section>
-
 <section id="参考資料" class="title-slide slide level1 center">
 <h1>参考資料</h1>
 <ul>
@@ -900,14 +904,14 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul>
 </section>
 
-<section id="スライドの最後です" class="title-slide slide level1 center">
+<section id="スライドの最後です" class="title-slide slide level1 center" data-background="#3E8EDE">
 <h1>スライドの最後です</h1>
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Published: 2026-02-13, Last update: 2026-02-23 11:09:02, Time Zone: Asia/Tokyo</p>
+<p>Published: 2026-02-13, Last update: 2026-02-23 12:08:58, Time Zone: Asia/Tokyo</p>
 </div>
 </div></div>
 

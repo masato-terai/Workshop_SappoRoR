@@ -25,15 +25,13 @@ format:
       buttons: false
 title-slide-attributes:
   data-background-image: fig/title_image.png
-  data-background-size: contain
+  data-background-size: cover
   data-background-opacity: "0.15"
 ---
 
-# Todo
-- Title Slideは個別で画像を入れる
+# はじめに{background="#3E8EDE"}
 
-# 講師プロフィール
-
+## 自己紹介 
 - 寺井雅人（Masato Terai）
 
     - 熊本出身、名古屋在住
@@ -48,7 +46,7 @@ title-slide-attributes:
 ![](fig/masa.jpg){width=300px}
 :::
 
-# 私とR、Rコミュニティ
+## 私とR、Rコミュニティ
 - Rユーザー歴8年
 
     - 半年前、RStudioからPositronへ完全移行
@@ -59,7 +57,7 @@ title-slide-attributes:
 
     - 初発表：Japan.R (2024)
 
-# 想定しているユーザー
+## 想定している聴衆の方
 
 - Rをメインで使うもしくはR時々Pythonの方
 
@@ -67,7 +65,7 @@ title-slide-attributes:
 
 - Visual Studio Codeより、RStudioに慣れ親しんでいる方
 
-# 今回の内容
+## 今回の内容
 - **後で目次を挿入**
 
 - AIアシストやrenv、コマンドラインGitは触れない
@@ -165,7 +163,7 @@ title-slide-attributes:
 
     - R + Python、今後は多言語もならPositron
 
-# とりあえず触ってみよう
+# 実際に触ってみましょう{background="#3E8EDE"}
 
 # Positronのインストール
 
@@ -246,13 +244,11 @@ title-slide-attributes:
 
 - データの分布や、欠損値の割合などを確認できる
 
-- 以下のコードをRunして、VARIABLESで確認してみてください。
+- 以下のコードをRunして、VARIABLESで確認
 
 ```{.r}
 dat <- airquality
 ```
-
-- 画像を確認
 
 ## フィルター機能
 - RStudioに比べ、より詳細な設定が可能
@@ -263,11 +259,17 @@ dat <- airquality
 
 - セッション内で作成した図が表示されており、探しやすい
 
+    - 以下のコードをRunして、PLOTSで確認
+
 ```{.r}
-dat <- mtars
+dat <- mtcars
 plot(dat$mpg)
 boxplot(dat$mpg, dat$cyl)
 ```
+
+# ちなみに、、、
+
+- SESSIONタブで表示されている、VARIABLES、PLOTS、CONSOLEはドラッグ&ドロップで表示の順番を変更できます。
 
 # Git操作
 - サイドバーの上から3つ目がGit操作
@@ -344,10 +346,10 @@ boxplot(dat$mpg, dat$cyl)
 ![Pic From indent-rainbow](https://raw.githubusercontent.com/oderwat/vscode-indent-rainbow/master/assets/example.png)
 
 
-# QuartoとR Markdown{background="#ffffffe8" background-image="fig/rmdqmd.png" background-size="600px" background-position="bottom right" background-repeat="no-repeat"}
+# QuartoとR Markdown{background="#3E8EDE"}
 
 ## 概要
-- Pandocを基盤にした、研究・技術文書作成のための出版システム
+- Pandocを基盤にした研究・技術文書作成のための出版システム
 
 - Rに依存しない
 
@@ -358,6 +360,8 @@ boxplot(dat$mpg, dat$cyl)
     - R -> Jupyter = Pythonの追加インストール
 
     - R & Python -> Quarto
+
+#  {background-image="fig/rmdqmd.png" background-size="600px"  background-repeat="no-repeat"}
 
 ## R Markdownとの違い
 
@@ -374,7 +378,7 @@ boxplot(dat$mpg, dat$cyl)
         - 長期的にパッケージ管理がしやすい
 
 
-## R Markdownとの違い
+# R Markdownとの違い
 - PositronとQuarto、RStudioとR Markdown
 
     - R MarkdownはRStudio内で完結するのが快適（Pythonが使えないわけではない）
@@ -385,7 +389,7 @@ boxplot(dat$mpg, dat$cyl)
 
 - RStudioと同様、今後も生き残るらしいのでご安心を
 
-    - R Markdownに満足しているのであれば、急いでQuartoに変える必要もない
+    - R Markdownに満足しているのであれば、Quartoに変える必要もない
 
 ::: {.callout-note}
 R Markdown is not going away! 
@@ -393,7 +397,7 @@ R Markdown is used extensively and continues to work well. It will continue to b
 — [FAQ for R Markdown Users](https://quarto.org/docs/faq/rmarkdown.html?utm_source=chatgpt.com#is-r-markdown-going-away-will-my-r-markdown-documents-continue-to-work)
 :::
 
-## PositronでQuartoを触ってみましょう
+# PositronでQuartoを触ってみましょう
 
 - 左上のNewをクリック -> ［New File...］ -> ［Quarto Document］をクリック
 
@@ -401,32 +405,34 @@ R Markdown is used extensively and continues to work well. It will continue to b
 
     - [Ctrl] + [P] を押す -> [>]を入力 -> [Create New File...] -> ［New File...］ -> ［Quarto Document］
 
-## R Markdownファイルも開きましょう
+# R Markdownファイルも開きましょう
 
-- 残念ながら、.Rmdファイルのテンプレート選択画面はない
+- 残念ながら.Rmdファイルのテンプレート選択画面はない
 
     - RStudioで作成した.Rmdファイルを開きます
 
 ## R Markdownとの記法の違い
 
-### YAML
-- 出力形式の指定
+### YAML：出力形式の指定
 
-    - Quarto: format
+::: columns
+::: {.column width="50%"}
+- Quarto: ```format```
+:::
 
-        - HTML: html
-
-    - R Markdown: output
-
-        - HTML: html_document
-
+::: {.column width="50%"}
+- R Markdown: ```output```
+:::
 ![](fig/yaml.png)
+:::
 
 ## YAML
 
-- R Markdownに合わせて書くと...
+- R Markdownに合わせる
 
-    - ```date: now```でもよい
+    - ```author```と```date```も追加
+
+        - ```date: now```でもよい
 
 ``` {.r code-line-numbers="3-5"}
 title: "Untitled"
@@ -466,7 +472,7 @@ ggplot(
 :::
 :::
 
-# R Markdownとの記法の違い
+# その他
 
 ::: {.callout-important}
 Quartoでは、R Markdownよりも記法が少し厳しい印象です。
@@ -480,17 +486,17 @@ Quartoでは、R Markdownよりも記法が少し厳しい印象です。
 
 # HTMLファイルに書き出す
 
-- Quarto -> ［Preview］もしくは［口 Render on Save］に✔を入れてから保存
+- Quarto：［Preview］もしくは［口 Render on Save］に✔を入れてから保存
 
-    - TERMINALも可能
+    - TERMINALでも可能
     
         - ```quarto preview ファイル名.qmd```
         
         - ```quarto render ファイル名.qmd```
 
-- R Markdown -> 上記の方法もしくは［Preview］に［Render Document With R Markdown］
+- R Markdown：上記の方法もしくは［Preview］で［Render Document With R Markdown］を選択
 
-- [公式のチートシートもある](https://rstudio.github.io/cheatsheets/html/quarto.html)
+- [公式のチートシートはこのリンクから](https://rstudio.github.io/cheatsheets/html/quarto.html)
 
 ## ちなみに
 
@@ -505,7 +511,7 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 ```engine: knitr```
 :::
 
-# まとめ
+# まとめ{background="#3E8EDE"}
 
 ## Positronがお勧めな理由
 
@@ -551,11 +557,6 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 
     - Pythonをもっと習得したいが、言語によってIDEを変えたくないから
 
-# おしまい {background="#9ac7ffff" text="white"}
-
-Enjoy!
-
-
 # 参考資料
 - [【AI全部載せできるRのデータ分析環境はこれ】Positron Assistantの導入ガイド](https://note.com/mitti1210/n/n87a4ff6fc9c3)
 
@@ -565,4 +566,4 @@ Enjoy!
 
 - [I'm an R user: Quarto or R Markdown?](https://www.jumpingrivers.com/blog/quarto-rmarkdown-comparison/)
 
-# スライドの最後です
+# スライドの最後です{background="#3E8EDE"}
