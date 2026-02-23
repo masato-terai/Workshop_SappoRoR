@@ -272,12 +272,20 @@ boxplot(dat$mpg, dat$cyl)
 # Git操作
 - サイドバーの上から3つ目がGit操作
 
-    - RStudioに比べ、クリック操作で行えるコマンドがかなり増えた（VS Codeレベルになった）
+    - RStudioでは、EnvironmentとGitを同時に開けないので、サイドバーに表示されているのはありがたい
 
-    - GitHubとの連携もより簡単に（なった気がする）
+- RStudioに比べ、クリック操作で行えるコマンドがかなり増えた（VS Codeレベルになった）
 
-# Git(hub)の入門に関して
-- GitやGithubをこれから勉強したい方へ
+    - RStudio：Commit、Push、Pull
+
+# GitHub
+
+- 連携のしやすさ：大きな差はない
+
+- 差分の確認はRStudioの方がやや見やすい
+
+# ちなみに
+- GitやGitHubをこれから勉強したい方へ
 
     - [RStudioとGitの連携によるバージョン管理](https://www.jstage.jst.go.jp/article/methodologysig/17/0/17_17.3/_article/-char/ja/)
 
@@ -292,7 +300,7 @@ boxplot(dat$mpg, dat$cyl)
 
 ![](fig/preview.png)
 
-# ミニマップ機能（全体を俯瞰）
+# ミニマップ機能
 
 - スクロールバーの上で右クリック → [Minimap]をクリック
 
@@ -308,7 +316,11 @@ boxplot(dat$mpg, dat$cyl)
 - フォントの大きさの変更：左下の⚙をクリック → [Settings] → [Text Editor] → [Font Size]
 
 # おすすめ拡張機能
-- タイトル画像挿入
+- 必要なものは基本的にインストール済
+
+- 「VS Code　おすすめ拡張機能」で検索がおすすめ
+
+    - 大体の拡張機能はPositronにインストール可能
 
 ## vscode-pdf
 - Positron内でPDFを確認できる
@@ -323,13 +335,14 @@ boxplot(dat$mpg, dat$cyl)
 
 ![Pic From Rainbow CSV](https://i.imgur.com/6eJqeUN.png)
 
-## Material Icon Theme
+## indent-rainbow
 
-- フォルダやファイルのアイコンをより特徴的なアイコンに変える
+- インデントを階層ごとに異なる色でハイライト
 
-    - ファイルを探しやすい
+    - 背景が黒だと見えずらいので注意
 
-- 画像を挿入
+![Pic From indent-rainbow](https://raw.githubusercontent.com/oderwat/vscode-indent-rainbow/master/assets/example.png)
+
 
 # QuartoとR Markdown{background="#ffffffe8" background-image="fig/rmdqmd.png" background-size="600px" background-position="bottom right" background-repeat="no-repeat"}
 
@@ -476,8 +489,6 @@ Quartoでは、R Markdownよりも記法が少し厳しい印象です。
         - ```quarto render ファイル名.qmd```
 
 - R Markdown -> 上記の方法もしくは［Preview］に［Render Document With R Markdown］
-
-## その他
 
 - [公式のチートシートもある](https://rstudio.github.io/cheatsheets/html/quarto.html)
 
