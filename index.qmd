@@ -163,7 +163,7 @@ title-slide-attributes:
 
     - R + Python、今後は多言語もならPositron
 
-## 実際に触ってみましょう{background="#1F4E79"}
+# 実際に触ってみましょう{background="#1F4E79"}
 
 ## Positronのインストール
 
@@ -397,8 +397,9 @@ R Markdown is used extensively and continues to work well. It will continue to b
 — [FAQ for R Markdown Users](https://quarto.org/docs/faq/rmarkdown.html?utm_source=chatgpt.com#is-r-markdown-going-away-will-my-r-markdown-documents-continue-to-work)
 :::
 
-## PositronでQuartoを触ってみましょう{background="#1F4E79"}
+# PositronでQuartoを触ってみましょう{background="#1F4E79"}
 
+## Quartoファイルの作成
 - 左上のNewをクリック -> ［New File...］ -> ［Quarto Document］をクリック
 
 - キーボードから手を放したくないのであれば、
@@ -511,6 +512,15 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 ```engine: knitr```
 :::
 
+## ちなみに
+- このスライドもQuartoで作成しています。
+
+- Githubの "index.qmd"を見ると、YAMLの設定など細かい点を確認できます。
+
+    - YAMLで出来ない設定は.scssファイルで設定しています。
+
+- GitHubへのリンク：[https://github.com/masato-terai/Workshop_SappoRoR](https://github.com/masato-terai/Workshop_SappoRoR)
+
 # まとめ{background="#1F4E79"}
 
 ## Positronがお勧めな理由
@@ -558,12 +568,45 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
     - Pythonをもっと習得したいが、言語によってIDEを変えたくないから
 
 # 参考資料{background="#1F4E79"}
-- [【AI全部載せできるRのデータ分析環境はこれ】Positron Assistantの導入ガイド](https://note.com/mitti1210/n/n87a4ff6fc9c3)
+- 💻：ウェブサイト
+- 📽：Youtube
 
-- [Positronって実際どうなの？RStudioユーザーがCursorと比較しながら触ってみた](https://note.com/mitti1210/n/nb41e77d49f51)
+## 英語
+- 💻Positron
 
-- [Settings, Keybindings, and Extensions for Positron](https://christophertkenny.com/posts/2024-06-29-positron-settings/#extensions)
+    - [https://positron.posit.co](https://positron.posit.co)
 
-- [I'm an R user: Quarto or R Markdown?](https://www.jumpingrivers.com/blog/quarto-rmarkdown-comparison/)
+- 💻quarto
+
+    - [https://quarto.org](https://quarto.org)
+
+- 📽Positron IDE doing Data Analysis with R
+
+    - [https://youtu.be/-jhTjOK4vQ8](https://youtu.be/-jhTjOK4vQ8)
+
+- 💻Settings, Keybindings, and Extensions for Positron
+
+    - [https://christophertkenny.com/posts/2024-06-29-positron-settings/#extensions](https://christophertkenny.com/posts/2024-06-29-positron-settings/#extensions)
+
+- 💻I'm an R user: Quarto or R Markdown?
+
+    - [https://www.jumpingrivers.com/blog/quarto-rmarkdown-comparison/](https://www.jumpingrivers.com/blog/quarto-rmarkdown-comparison/)
+
+## 日本語
+
+- 💻【AI全部載せできるRのデータ分析環境はこれ】Positron Assistantの導入ガイド
+    - [https://note.com/mitti1210/n/n87a4ff6fc9c3](https://note.com/mitti1210/n/n87a4ff6fc9c3)
+
+- 💻Positronのおすすめ設定！【R | Python】
+
+    - [https://yo5uke.com/pages/tips/2025/09/250901_positron_setting/](https://yo5uke.com/pages/tips/2025/09/250901_positron_setting/)
+
+- 💻Positron 最速入門
+
+    - [https://zenn.dev/yutannihilation/articles/39c881445ca1b7](https://zenn.dev/yutannihilation/articles/39c881445ca1b7)
+
+- 💻Positronって実際どうなの？RStudioユーザーがCursorと比較しながら触ってみた
+
+    - [https://note.com/mitti1210/n/nb41e77d49f51](https://note.com/mitti1210/n/nb41e77d49f51)
 
 # スライドの最後です{background="#1F4E79"}
