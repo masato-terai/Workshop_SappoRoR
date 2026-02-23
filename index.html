@@ -206,7 +206,7 @@
 </div>
 </div>
 
-  <p class="date">2026-02-23 12:08:58</p>
+  <p class="date">2026-02-23 12:21:33</p>
 </section>
 <section>
 <section id="はじめに" class="title-slide slide level1 center" data-background="#3E8EDE">
@@ -254,22 +254,24 @@
 </section>
 <section id="今回の内容" class="slide level2">
 <h2>今回の内容</h2>
-<ul>
-<li><p><strong>後で目次を挿入</strong></p></li>
-<li><p>AIアシストやrenv、コマンドラインGitは触れない</p>
-<ul>
-<li>AIアシストのおすすめ記事：<a href="https://zenn.dev/uribo/articles/7dbc83e4bbfcc0">Positron Assistant: データサイエンティスト向けのAIアシスタント機能</a></li>
-</ul></li>
-</ul>
+<ol type="1">
+<li><p>Positronについて</p></li>
+<li><p>Quartoについて</p></li>
+</ol>
 </section></section>
-<section id="positronとは" class="title-slide slide level1 center">
-<h1>Positronとは</h1>
+<section>
+<section id="positronについて" class="title-slide slide level1 center" data-background="#3E8EDE">
+<h1>1. Positronについて</h1>
+
+</section>
+<section id="positronとは" class="slide level2">
+<h2>Positronとは</h2>
 <ul>
 <li><p>RとPythonを”First-class”言語とするVisual Studio Codeに似ている統合開発環境</p>
 <ul>
-<li><p>Posit社（RStudioを開発した）が開発中の<strong>次世代</strong>統合開発環境</p></li>
-<li><p>もう beta 版ではない</p></li>
-</ul>
+<li>Posit社（RStudioを開発した）が開発中の<strong>次世代</strong>統合開発環境</li>
+</ul></li>
+<li><p>もう beta 版ではない</p>
 <blockquote>
 <p>Stable releases of Positron are now available!<br>
 Thank you to all our beta users who have been testing and giving feedback on our prereleases over the last year.</p>
@@ -277,9 +279,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </blockquote></li>
 </ul>
 </section>
-
-<section id="rstudioから乗り換えるべき" class="title-slide slide level1 center">
-<h1>RStudioから乗り換えるべき？？</h1>
+<section id="rstudioから乗り換えるべき" class="slide level2">
+<h2>RStudioから乗り換えるべき？？</h2>
 <ul>
 <li><p>RStudioが消えるわけではない（開発が止まったりするわけではない）</p>
 <ul>
@@ -291,9 +292,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section>
-
-<section id="こんな人にお勧めかもby-公式" class="title-slide slide level1 center">
-<h1>こんな人にお勧めかも（by 公式）</h1>
+<section id="こんな人にお勧めかもby-公式" class="slide level2">
+<h2>こんな人にお勧めかも（by 公式）</h2>
 <ul>
 <li><p>VS Code を使ってデータ分析（Python や R）をしているが、試しにコードを動かしたり、変数やデータを中身まで確認したり、グラフを操作したり、Shiny・Streamlit・FastAPI のようなデータアプリを作ったりするには、もう少し専用の便利機能がほしい人。</p></li>
 <li><p>JupyterLab やオンラインのノートブック環境でデータ分析（Python や R）をしていて、ノートブックは使い続けたいが、もっと高機能で本格的な IDE を使いたい人。</p></li>
@@ -302,9 +302,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>データ分析に特化した強力な AI 機能を、モダンで拡張性の高い IDE の中で使いたい人。</p></li>
 </ul>
 </section>
-
-<section id="もっと自分好みにカスタマイズしたり機能を拡張する" class="title-slide slide level1 center">
-<h1>もっと自分好みにカスタマイズしたり、機能を拡張する</h1>
+<section id="もっと自分好みにカスタマイズしたり機能を拡張する" class="slide level2">
+<h2>もっと自分好みにカスタマイズしたり、機能を拡張する</h2>
 <ul>
 <li><p>拡張機能</p>
 <ul>
@@ -320,9 +319,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section>
-
-<section id="rstudioとの主な違い" class="title-slide slide level1 center">
-<h1>RStudioとの主な違い</h1>
+<section id="rstudioとの主な違い" class="slide level2">
+<h2>RStudioとの主な違い</h2>
 <ul>
 <li><p>Rprojがない！</p>
 <ul>
@@ -336,9 +334,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section>
-
-<section id="rstudioとの主な違い-1" class="title-slide slide level1 center">
-<h1>RStudioとの主な違い</h1>
+<section id="rstudioとの主な違い-1" class="slide level2">
+<h2>RStudioとの主な違い</h2>
 <ul>
 <li><p>現時点では、RStudioとは異なり、実行結果は、コンソールペインでしか確認できない</p>
 <p><code>However, we are actively enhancing our Positron-native notebook UI that will provide inline outputs for Python or R sessions.</code></p></li>
@@ -346,9 +343,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>バージョンの切り替えも、コンソールの再起動だけでよい</p></li>
 </ul>
 </section>
-
-<section id="ai-powered-data-science" class="title-slide slide level1 center">
-<h1>AI-Powered Data Science</h1>
+<section id="ai-powered-data-science" class="slide level2">
+<h2>AI-Powered Data Science</h2>
 <ul>
 <li><p>Positronは、RStudioに比べ、より多くのAIサポートを受けることができる</p>
 <ul>
@@ -359,9 +355,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section>
-
-<section id="つまり" class="title-slide slide level1 center">
-<h1>つまり</h1>
+<section id="つまり" class="slide level2">
+<h2>つまり</h2>
 <ul>
 <li><p>RStudioの機能をそのままに、新たな機能を拡張したわけではない</p>
 <ul>
@@ -377,15 +372,11 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section>
-
-<section id="実際に触ってみましょう" class="title-slide slide level1 center" data-background="#3E8EDE">
-<h1>実際に触ってみましょう</h1>
-
+<section id="実際に触ってみましょう" class="slide level2" data-background="#3E8EDE">
+<h2>実際に触ってみましょう</h2>
 </section>
-
-<section>
-<section id="positronのインストール" class="title-slide slide level1 center">
-<h1>Positronのインストール</h1>
+<section id="positronのインストール" class="slide level2">
+<h2>Positronのインストール</h2>
 <ul>
 <li><p>Rのインストールも忘れずに！</p>
 <ul>
@@ -400,9 +391,9 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <section id="レイアウト" class="slide level2">
 <h2>レイアウト</h2>
 
-<img data-src="https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg" class="r-stretch quarto-figure-center"><p class="caption">Pic From https://positron.posit.co/</p></section></section>
-<section id="それぞれの機能" class="title-slide slide level1 center">
-<h1>それぞれの機能</h1>
+<img data-src="https://positron.posit.co/images/user-interface-for-rstudio-migration.jpeg" class="r-stretch quarto-figure-center"><p class="caption">Pic From https://positron.posit.co/</p></section>
+<section id="それぞれの機能" class="slide level2">
+<h2>それぞれの機能</h2>
 <ul>
 <li><p><strong>Activity Bar</strong>：ファイル、Git、拡張機能、AIアシストなどを表示</p></li>
 <li><p><strong>Primary Side Bar</strong>：Activity Barの詳細。Activity Barで選んだものによって内容が異なる。</p></li>
@@ -411,9 +402,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p><strong>Secondary Side Bar</strong>：変数や、プロットなどが表示される</p></li>
 </ul>
 </section>
-
-<section id="rstudioとの比較" class="title-slide slide level1 center">
-<h1>RStudioとの比較</h1>
+<section id="rstudioとの比較" class="slide level2">
+<h2>RStudioとの比較</h2>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -435,9 +425,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </div>
 </div>
 </section>
-
-<section id="レイアウトの指定" class="title-slide slide level1 center">
-<h1>レイアウトの指定</h1>
+<section id="レイアウトの指定" class="slide level2">
+<h2>レイアウトの指定</h2>
 <ul>
 <li><p>Stacked Layout：デフォルト</p></li>
 <li><p>Side-By-Side Layout：RStudioにより近い</p></li>
@@ -445,10 +434,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>Assistant Layout：コメント追加</p></li>
 </ul>
 </section>
-
-<section>
-<section id="コマンドパレット" class="title-slide slide level1 center">
-<h1>コマンドパレット</h1>
+<section id="コマンドパレット" class="slide level2">
+<h2>コマンドパレット</h2>
 <ul>
 <li><p>VS Codeからの機能</p>
 <ul>
@@ -484,15 +471,12 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul></li>
 </ul>
-</section></section>
-<section id="アピールポイント" class="title-slide slide level1 center">
-<h1>アピールポイント</h1>
-
 </section>
-
-<section>
-<section id="データの確認機能" class="title-slide slide level1 center">
-<h1>データの確認機能</h1>
+<section id="アピールポイント" class="slide level2">
+<h2>アピールポイント</h2>
+</section>
+<section id="データの確認機能" class="slide level2">
+<h2>データの確認機能</h2>
 <ul>
 <li><p>データの分布や、欠損値の割合などを確認できる</p></li>
 <li><p>以下のコードをRunして、VARIABLESで確認</p></li>
@@ -505,9 +489,9 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>RStudioに比べ、より詳細な設定が可能</p>
 <p><img data-src="fig/filter.png"></p></li>
 </ul>
-</section></section>
-<section id="作成した図を確認可能" class="title-slide slide level1 center">
-<h1>作成した図を確認可能</h1>
+</section>
+<section id="作成した図を確認可能" class="slide level2">
+<h2>作成した図を確認可能</h2>
 <ul>
 <li><p>セッション内で作成した図が表示されており、探しやすい</p>
 <ul>
@@ -518,16 +502,14 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <span id="cb2-2"><a href=""></a><span class="fu">plot</span>(dat<span class="sc">$</span>mpg)</span>
 <span id="cb2-3"><a href=""></a><span class="fu">boxplot</span>(dat<span class="sc">$</span>mpg, dat<span class="sc">$</span>cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-
-<section id="ちなみに" class="title-slide slide level1 center">
-<h1>ちなみに、、、</h1>
+<section id="ちなみに" class="slide level2">
+<h2>ちなみに、、、</h2>
 <ul>
 <li>SESSIONタブで表示されている、VARIABLES、PLOTS、CONSOLEはドラッグ&amp;ドロップで表示の順番を変更できます。</li>
 </ul>
 </section>
-
-<section id="git操作" class="title-slide slide level1 center">
-<h1>Git操作</h1>
+<section id="git操作" class="slide level2">
+<h2>Git操作</h2>
 <ul>
 <li><p>サイドバーの上から3つ目がGit操作</p>
 <ul>
@@ -539,18 +521,15 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section>
-
-<section id="github" class="title-slide slide level1 center">
-<h1>GitHub</h1>
+<section id="github" class="slide level2">
+<h2>GitHub</h2>
 <ul>
 <li><p>連携のしやすさ：大きな差はない</p></li>
 <li><p>差分の確認はRStudioの方がやや見やすい</p></li>
 </ul>
 </section>
-
-<section>
-<section id="ちなみに-1" class="title-slide slide level1 center">
-<h1>ちなみに</h1>
+<section id="ちなみに-1" class="slide level2">
+<h2>ちなみに</h2>
 <ul>
 <li><p>GitやGitHubをこれから勉強したい方へ</p>
 <ul>
@@ -568,9 +547,9 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 
-<img data-src="fig/preview.png" class="r-stretch"></section></section>
-<section id="ミニマップ機能" class="title-slide slide level1 center">
-<h1>ミニマップ機能</h1>
+<img data-src="fig/preview.png" class="r-stretch"></section>
+<section id="ミニマップ機能" class="slide level2">
+<h2>ミニマップ機能</h2>
 <ul>
 <li><p>スクロールバーの上で右クリック → [Minimap]をクリック</p>
 <ul>
@@ -579,9 +558,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul>
 
 <img data-src="fig/minimap.png" class="r-stretch quarto-figure-center"><p class="caption"><strong>左：RStudio、右：Positron</strong></p></section>
-
-<section id="テーマフォントの変更" class="title-slide slide level1 center">
-<h1>テーマ・フォントの変更</h1>
+<section id="テーマフォントの変更" class="slide level2">
+<h2>テーマ・フォントの変更</h2>
 <ul>
 <li><p>テーマの変更：左下の⚙をクリック → [Themes] → [Color Theme]</p>
 <ul>
@@ -590,10 +568,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>フォントの大きさの変更：左下の⚙をクリック → [Settings] → [Text Editor] → [Font Size]</p></li>
 </ul>
 </section>
-
-<section>
-<section id="おすすめ拡張機能" class="title-slide slide level1 center">
-<h1>おすすめ拡張機能</h1>
+<section id="おすすめ拡張機能" class="slide level2">
+<h2>おすすめ拡張機能</h2>
 <ul>
 <li><p>必要なものは基本的にインストール済</p></li>
 <li><p>「VS Code　おすすめ拡張機能」で検索がおすすめ</p>
@@ -630,8 +606,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 
 <img data-src="https://raw.githubusercontent.com/oderwat/vscode-indent-rainbow/master/assets/example.png" class="r-stretch quarto-figure-center"><p class="caption">Pic From indent-rainbow</p></section></section>
 <section>
-<section id="quartoとr-markdown" class="title-slide slide level1 center" data-background="#3E8EDE">
-<h1>QuartoとR Markdown</h1>
+<section id="quartoについて" class="title-slide slide level1 center" data-background="#3E8EDE">
+<h1>2.Quartoについて</h1>
 
 </section>
 <section id="概要" class="slide level2">
@@ -646,11 +622,9 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>R &amp; Python -&gt; Quarto</p></li>
 </ul></li>
 </ul>
-</section></section>
-<section>
-<section id="section" class="title-slide slide level1 center" data-background-image="fig/rmdqmd.png" data-background-size="600px" data-background-repeat="no-repeat">
-<h1></h1>
-
+</section>
+<section id="section" class="slide level2" data-background-image="fig/rmdqmd.png" data-background-size="600px" data-background-repeat="no-repeat">
+<h2></h2>
 </section>
 <section id="r-markdownとの違い" class="slide level2">
 <h2>R Markdownとの違い</h2>
@@ -668,10 +642,9 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul></li>
 </ul>
-</section></section>
-<section>
-<section id="r-markdownとの違い-1" class="title-slide slide level1 center">
-<h1>R Markdownとの違い</h1>
+</section>
+<section id="r-markdownとの違い-1" class="slide level2">
+<h2>R Markdownとの違い</h2>
 <ul>
 <li><p>PositronとQuarto、RStudioとR Markdown</p>
 <ul>
@@ -701,9 +674,9 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </div>
 </div>
 </div>
-</section></section>
-<section id="positronでquartoを触ってみましょう" class="title-slide slide level1 center">
-<h1>PositronでQuartoを触ってみましょう</h1>
+</section>
+<section id="positronでquartoを触ってみましょう" class="slide level2" data-background="#3E8EDE">
+<h2>PositronでQuartoを触ってみましょう</h2>
 <ul>
 <li><p>左上のNewをクリック -&gt; ［New File…］ -&gt; ［Quarto Document］をクリック</p></li>
 <li><p>キーボードから手を放したくないのであれば、</p>
@@ -712,10 +685,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section>
-
-<section>
-<section id="r-markdownファイルも開きましょう" class="title-slide slide level1 center">
-<h1>R Markdownファイルも開きましょう</h1>
+<section id="r-markdownファイルも開きましょう" class="slide level2">
+<h2>R Markdownファイルも開きましょう</h2>
 <ul>
 <li><p>残念ながら.Rmdファイルのテンプレート選択画面はない</p>
 <ul>
@@ -782,9 +753,9 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <span id="cb5-8"><a href=""></a>    ) <span class="sc">+</span></span>
 <span id="cb5-9"><a href=""></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
-</section></section>
-<section id="その他" class="title-slide slide level1 center">
-<h1>その他</h1>
+</section>
+<section id="その他" class="slide level2">
+<h2>その他</h2>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -806,10 +777,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section>
-
-<section>
-<section id="htmlファイルに書き出す" class="title-slide slide level1 center">
-<h1>HTMLファイルに書き出す</h1>
+<section id="htmlファイルに書き出す" class="slide level2">
+<h2>HTMLファイルに書き出す</h2>
 <ul>
 <li><p>Quarto：［Preview］もしくは［口 Render on Save］に✔を入れてから保存</p>
 <ul>
@@ -894,7 +863,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul>
 </section></section>
-<section id="参考資料" class="title-slide slide level1 center">
+<section id="参考資料" class="title-slide slide level1 center" data-background="#3E8EDE">
 <h1>参考資料</h1>
 <ul>
 <li><p><a href="https://note.com/mitti1210/n/n87a4ff6fc9c3">【AI全部載せできるRのデータ分析環境はこれ】Positron Assistantの導入ガイド</a></p></li>
@@ -911,7 +880,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Published: 2026-02-13, Last update: 2026-02-23 12:08:58, Time Zone: Asia/Tokyo</p>
+<p>Published: 2026-02-13, Last update: 2026-02-23 12:21:33, Time Zone: Asia/Tokyo</p>
 </div>
 </div></div>
 
