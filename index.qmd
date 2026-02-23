@@ -484,6 +484,10 @@ Quartoでは、R Markdownよりも記法が少し厳しい印象です。
 
 - R Markdown -> 上記の方法もしくは［Preview］に［Render Document With R Markdown］
 
+## その他
+
+- [公式のチートシートもある](https://rstudio.github.io/cheatsheets/html/quarto.html)
+
 ## ちなみに
 
 ::: {.callout-caution}
@@ -530,6 +534,8 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 - RStudioに慣れた人は最初戸惑うかも
 
 - R言語だけならRStudioで十分
+
+- 紙媒体の資料はまだない
 
 ## Positronに移行しないとだめ！とは思わない
 
