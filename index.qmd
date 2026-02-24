@@ -90,7 +90,7 @@ title-slide-attributes:
 
 - JupyterLabなどを使い続けたいが、もっと高機能で本格的な IDE を使いたい人
 
-- **RStudio を使っていて、IDE をもっと自分好みにカスタマイズしたり、機能を拡張したりしたい人。**
+- **RStudio を使っていて、IDE をもっと自分好みにカスタマイズしたり、機能を拡張したりしたい人**
 
 - Python や R だけでなく、Rust、C++、JavaScript、Lua などの言語も使って日常的にデータ分析やパッケージ開発をしている人
 
@@ -533,8 +533,8 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
     - 既にRStudioをガンガン使っていて、満足しているならRStudioのままでOK!
 :::
 
-::: incremental
 ## Positronへ乗り換えた個人的理由
+::: incremental
 
     - わさもんだから（熊本弁：新しいもの好き）
     
