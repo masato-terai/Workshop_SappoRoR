@@ -206,7 +206,7 @@
 </div>
 </div>
 
-  <p class="date">2026-02-24 15:53:03</p>
+  <p class="date">2026-02-24 16:06:26</p>
 </section>
 <section>
 <section id="はじめに" class="title-slide slide level1 center" data-background="#1F4E79">
@@ -289,20 +289,6 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>データ分析に特化した強力な AI 機能を、モダンで拡張性の高い IDE の中で使いたい人</p></li>
 </ul>
 </section>
-<section id="カスタマイズと機能拡張とは" class="slide level2">
-<h2>カスタマイズと機能拡張とは：</h2>
-<ul>
-<li><p>拡張機能</p>
-<ul>
-<li>VS Codeのほとんどの拡張機能を使える</li>
-</ul></li>
-<li><p>AIアシスト</p>
-<ul>
-<li><p>様々なLLMを選べる</p></li>
-<li><p>Databotによるノーコード開発</p></li>
-</ul></li>
-</ul>
-</section>
 <section id="rstudioとの主な違い" class="slide level2">
 <h2>RStudioとの主な違い</h2>
 <ul>
@@ -311,11 +297,8 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li><p>フォルダ = プロジェクト</p></li>
 <li><p>詳しい解説：<a href="https://positron.posit.co/migrate-rstudio-rproj.html">The Rproj File</a></p></li>
 </ul></li>
-<li><p>RMarkdown、Quartoの書き出しが可能だが、いわゆる “Knit”ボタンがない</p>
-<ul>
-<li><p>qmdファイルの場合、“Preview”や”Render on Save”で書きだす</p></li>
-<li><p>Rmdファイルの場合、“Preview”に、“Render Document With R Markdown”が表示される</p></li>
-</ul></li>
+<li><p>Rがクラッシュしても、Positron自体は生き残ることが多い</p></li>
+<li><p>RやPythonのバージョンの切り替えも、コンソールの再起動だけでよい</p></li>
 </ul>
 </section>
 <section id="rstudioとの主な違い-1" class="slide level2">
@@ -326,8 +309,11 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <p>However, we are actively enhancing our Positron-native notebook UI that will provide inline outputs for Python or R sessions.</p>
 <p>— <a href="https://positron.posit.co/faqs.html">Frequently Asked Questions</a></p>
 </blockquote></li>
-<li><p>Rがクラッシュしても、Positron自体は生き残ることが多い</p></li>
-<li><p>RやPythonのバージョンの切り替えも、コンソールの再起動だけでよい</p></li>
+<li><p>RMarkdown、Quartoの書き出しが可能だが、いわゆる “Knit”ボタンがない</p>
+<ul>
+<li><p>qmdファイルの場合、“Preview”や”Render on Save”で書きだす</p></li>
+<li><p>Rmdファイルの場合、“Preview”に、“Render Document With R Markdown”が表示される</p></li>
+</ul></li>
 </ul>
 </section>
 <section id="ai-powered-data-science" class="slide level2">
@@ -446,7 +432,6 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <ul>
 <li>キーボードから手を離さずに作業できる</li>
 </ul></li>
-<li><p>ショートカット（コマンドモード）</p></li>
 <li><p>大体のキーワードで検索してくれる（= 部分一致）</p>
 <ul>
 <li>Windows: [Ctrl] + [Shift] + [P]</li>
@@ -475,6 +460,16 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <li>Mac: [command] + [G]</li>
 </ul></li>
 </ul></li>
+</ul>
+</section>
+<section id="テーマフォントの変更" class="slide level2">
+<h2>テーマ・フォントの変更</h2>
+<ul>
+<li><p>テーマの変更：左下の⚙をクリック → [Themes] → [Color Theme]</p>
+<ul>
+<li>RStudioよりも選択肢が少ない</li>
+</ul></li>
+<li><p>フォントの大きさの変更：左下の⚙をクリック → [Settings] → [Text Editor] → [Font Size]</p></li>
 </ul>
 </section></section>
 <section>
@@ -526,13 +521,13 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <ul>
 <li>RStudio：Commit、Push、Pull</li>
 </ul></li>
+<li><p>差分の確認はRStudioの方がやや見やすい</p></li>
 </ul>
 </section>
 <section id="github" class="slide level2">
 <h2>GitHub</h2>
 <ul>
-<li><p>連携のしやすさ：大きな差はない</p></li>
-<li><p>差分の確認はRStudioの方がやや見やすい</p></li>
+<li>連携のしやすさ：大きな差はない</li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -574,16 +569,6 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul>
 
 <img data-src="fig/minimap.png" class="r-stretch quarto-figure-center"><p class="caption"><strong>左：RStudio、右：Positron</strong></p></section>
-<section id="テーマフォントの変更" class="slide level2">
-<h2>テーマ・フォントの変更</h2>
-<ul>
-<li><p>テーマの変更：左下の⚙をクリック → [Themes] → [Color Theme]</p>
-<ul>
-<li>RStudioよりも選択肢が少ない</li>
-</ul></li>
-<li><p>フォントの大きさの変更：左下の⚙をクリック → [Settings] → [Text Editor] → [Font Size]</p></li>
-</ul>
-</section>
 <section id="おすすめ拡張機能" class="slide level2">
 <h2>おすすめ拡張機能</h2>
 <ul>
@@ -732,7 +717,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
 </ul></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb3" data-code-line-numbers="3-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>title<span class="sc">:</span> <span class="st">"Untitled"</span></span>
+<div class="sourceCode" id="cb3" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>title<span class="sc">:</span> <span class="st">"Untitled"</span></span>
 <span id="cb3-2"><a href=""></a>author<span class="sc">:</span> <span class="st">"Masato Terai"</span></span>
 <span id="cb3-3"><a href=""></a>date<span class="sc">:</span> today          </span>
 <span id="cb3-4"><a href=""></a>format<span class="sc">:</span> html</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -742,28 +727,28 @@ Thank you to all our beta users who have been testing and giving feedback on our
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>R Markdown：チャンクで指定</li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href=""></a><span class="in">``` {.r echo = F, fig.dim = c(10, 4.5)}</span></span>
-<span id="cb4-2"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb4-3"><a href=""></a><span class="fu">ggplot</span>(</span>
-<span id="cb4-4"><a href=""></a>    mtcars, </span>
-<span id="cb4-5"><a href=""></a>    <span class="fu">aes</span>(hp, mpg)</span>
-<span id="cb4-6"><a href=""></a>    ) <span class="sc">+</span></span>
-<span id="cb4-7"><a href=""></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:50%;">
-<ul>
 <li>Quarto：チャンク<strong>内</strong>で指定</li>
 </ul>
-<div class="sourceCode" id="cb5" data-code-line-numbers="1-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="co">#| echo: false</span></span>
-<span id="cb5-2"><a href=""></a><span class="co">#| fig-width: 10</span></span>
-<span id="cb5-3"><a href=""></a><span class="co">#| fig-height: 4.5</span></span>
-<span id="cb5-4"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-5"><a href=""></a><span class="fu">ggplot</span>(</span>
-<span id="cb5-6"><a href=""></a>    mtcars, </span>
-<span id="cb5-7"><a href=""></a>    <span class="fu">aes</span>(hp, mpg)</span>
-<span id="cb5-8"><a href=""></a>    ) <span class="sc">+</span></span>
-<span id="cb5-9"><a href=""></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4" data-code-line-numbers="1-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="co">#| echo: false</span></span>
+<span id="cb4-2"><a href=""></a><span class="co">#| fig-width: 10</span></span>
+<span id="cb4-3"><a href=""></a><span class="co">#| fig-height: 4.5</span></span>
+<span id="cb4-4"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-5"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb4-6"><a href=""></a>    mtcars, </span>
+<span id="cb4-7"><a href=""></a>    <span class="fu">aes</span>(hp, mpg)</span>
+<span id="cb4-8"><a href=""></a>    ) <span class="sc">+</span></span>
+<span id="cb4-9"><a href=""></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>R Markdown：チャンクで指定</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href=""></a><span class="in">``` {.r echo = F, fig.dim = c(10, 4.5)}</span></span>
+<span id="cb5-2"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-3"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb5-4"><a href=""></a>    mtcars, </span>
+<span id="cb5-5"><a href=""></a>    <span class="fu">aes</span>(hp, mpg)</span>
+<span id="cb5-6"><a href=""></a>    ) <span class="sc">+</span></span>
+<span id="cb5-7"><a href=""></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 <section id="その他" class="slide level2">
@@ -950,7 +935,7 @@ Thank you to all our beta users who have been testing and giving feedback on our
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Published: 2026-02-13, Last update: 2026-02-24 15:53:03, Time Zone: Asia/Tokyo</p>
+<p>Published: 2026-02-13, Last update: 2026-02-24 16:06:26, Time Zone: Asia/Tokyo</p>
 </div>
 </div></div>
 

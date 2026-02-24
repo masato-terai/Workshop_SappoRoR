@@ -96,18 +96,6 @@ title-slide-attributes:
 
 - データ分析に特化した強力な AI 機能を、モダンで拡張性の高い IDE の中で使いたい人
 
-## カスタマイズと機能拡張とは：
-
-- 拡張機能
-
-    - VS Codeのほとんどの拡張機能を使える
-
-- AIアシスト
-
-    - 様々なLLMを選べる
-
-    - Databotによるノーコード開発
-
 ## RStudioとの主な違い
 - Rprojがない！
 
@@ -115,11 +103,9 @@ title-slide-attributes:
 
     - 詳しい解説：[The Rproj File](https://positron.posit.co/migrate-rstudio-rproj.html)
 
-- RMarkdown、Quartoの書き出しが可能だが、いわゆる "Knit"ボタンがない
+- Rがクラッシュしても、Positron自体は生き残ることが多い
 
-    - qmdファイルの場合、"Preview"や"Render on Save"で書きだす
-
-    - Rmdファイルの場合、"Preview"に、"Render Document With R Markdown"が表示される
+- RやPythonのバージョンの切り替えも、コンソールの再起動だけでよい
 
 ## RStudioとの主な違い
 - 現時点では、RStudioとは異なり、実行結果は、コンソールペインでしか確認できない
@@ -128,9 +114,12 @@ title-slide-attributes:
   >
   > — [Frequently Asked Questions](https://positron.posit.co/faqs.html)
 
-- Rがクラッシュしても、Positron自体は生き残ることが多い
+- RMarkdown、Quartoの書き出しが可能だが、いわゆる "Knit"ボタンがない
 
-- RやPythonのバージョンの切り替えも、コンソールの再起動だけでよい
+    - qmdファイルの場合、"Preview"や"Render on Save"で書きだす
+
+    - Rmdファイルの場合、"Preview"に、"Render Document With R Markdown"が表示される
+
 
 ## AI-Powered Data Science
 - PositronはRStudioに比べより多くのAIサポートを受けられる
@@ -209,8 +198,6 @@ AIサポートはPositronの推しポイントですが、個人的に使用し�
 
     - キーボードから手を離さずに作業できる
 
-- ショートカット（コマンドモード）
-
 - 大体のキーワードで検索してくれる（= 部分一致）
 
     - Windows:  [Ctrl] + [Shift] + [P]
@@ -234,6 +221,13 @@ AIサポートはPositronの推しポイントですが、個人的に使用し�
 
         - Windows: [Ctrl] + [G]
         - Mac: [command] + [G]
+
+## テーマ・フォントの変更
+- テーマの変更：左下の⚙をクリック → [Themes] → [Color Theme]
+
+    - RStudioよりも選択肢が少ない
+
+- フォントの大きさの変更：左下の⚙をクリック → [Settings] → [Text Editor] → [Font Size]
 
 # アピールポイント{background="#1F4E79"}
 
@@ -277,11 +271,13 @@ boxplot(dat$mpg, dat$cyl)
 
     - RStudio：Commit、Push、Pull
 
+- 差分の確認はRStudioの方がやや見やすい
+
+
 ## GitHub
 
 - 連携のしやすさ：大きな差はない
 
-- 差分の確認はRStudioの方がやや見やすい
 
 ::: {.callout-note}
 - GitやGitHubをこれから勉強したい方へ
@@ -306,13 +302,6 @@ boxplot(dat$mpg, dat$cyl)
     - RStudioのOutline機能はないので、その代用として使用
 
 ![**左：RStudio、右：Positron**](fig/minimap.png)
-
-## テーマ・フォントの変更
-- テーマの変更：左下の⚙をクリック → [Themes] → [Color Theme]
-
-    - RStudioよりも選択肢が少ない
-
-- フォントの大きさの変更：左下の⚙をクリック → [Settings] → [Text Editor] → [Font Size]
 
 ## おすすめ拡張機能
 - 必要なものは基本的にインストール済
@@ -432,7 +421,7 @@ boxplot(dat$mpg, dat$cyl)
 
         - ```date: now```でもよい
 
-``` {.r code-line-numbers="3-5"}
+``` {.r code-line-numbers="2-3"}
 title: "Untitled"
 author: "Masato Terai"
 date: today          
@@ -443,9 +432,11 @@ format: html
 
 ::: columns
 ::: {.column width="50%"}
-- R Markdown：チャンクで指定
-```{.markdown code-line-numbers="1"}
-``` {.r echo = F, fig.dim = c(10, 4.5)}
+- Quarto：チャンク**内**で指定
+```{.r code-line-numbers="1-3"}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 4.5
 library(ggplot2)
 ggplot(
     mtcars, 
@@ -454,12 +445,11 @@ ggplot(
   geom_point()
 ```
 :::
+
 ::: {.column width="50%"}
-- Quarto：チャンク**内**で指定
-```{.r code-line-numbers="1-3"}
-#| echo: false
-#| fig-width: 10
-#| fig-height: 4.5
+- R Markdown：チャンクで指定
+```{.markdown code-line-numbers="1"}
+``` {.r echo = F, fig.dim = c(10, 4.5)}
 library(ggplot2)
 ggplot(
     mtcars, 
@@ -531,7 +521,7 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 - R, RStudioにこれから触れる人は、Positronがお勧めらしい
 
     - 既にRStudioをガンガン使っていて、満足しているならRStudioのままでOK!
-    
+
 ## Positronへ乗り換えた個人的理由
 ::: incremental
 - わさもんだから（熊本弁：新しいもの好き）
