@@ -7,7 +7,7 @@
 
 ## Access to the slides with the following link
 - You can access the slides on any device, including smartphones, laptops, iPads, and so on.
-[Click this link]()
+[Click this link](https://masato-terai.github.io/Workshop_SappoRoR/#/title-slide)
 
 **Author Information:** 
 - Masato Terai (Aichi University of Technology, Japan)
