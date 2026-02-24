@@ -496,7 +496,7 @@ Quartoでは、R Markdownよりも記法が少し厳しい印象です。
 
 - [公式のチートシートはこのリンクから](https://rstudio.github.io/cheatsheets/html/quarto.html)
 
-## ちなみに
+## エラーが出たら
 
 ::: {.callout-caution}
 TERMINALでRenderすることも可能ですが、YAMLでengineを定義していない場合、エラーになる場合があります。
@@ -571,7 +571,6 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 
     - 紙媒体の資料はまだない
 :::
-
 
 # 参考資料{background="#1F4E79"}
 - 💻：ウェブサイト
