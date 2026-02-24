@@ -3,7 +3,7 @@
 
 
 <h2>QR code for this website</h2>
-<img src="../qrcode.png" alt="QR code" width="200">
+<img src="qrcode.png" alt="QR code" width="200">
 
 ## Access to the slides with the following link
 - You can access the slides on any device, including smartphones, laptops, iPads, and so on.
