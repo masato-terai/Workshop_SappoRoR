@@ -522,7 +522,7 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 
 ## RStudioから乗り換えるべき？？
 
-::: incremental
+
 ### 個人的にはお勧めだが、必須ではない 
 - RStudioが消えるわけではない（開発が止まったりするわけではない）
     
@@ -531,18 +531,16 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 - R, RStudioにこれから触れる人は、Positronがお勧めらしい
 
     - 既にRStudioをガンガン使っていて、満足しているならRStudioのままでOK!
-:::
-
+    
 ## Positronへ乗り換えた個人的理由
 ::: incremental
-
-    - わさもんだから（熊本弁：新しいもの好き）
+- わさもんだから（熊本弁：新しいもの好き）
     
-    - データの外観機能が気に入っている
+- データの外観機能が気に入っている
 
-    - Pythonをもっと習得したいが、言語によってIDEを変えたくないから
+- Pythonをもっと習得したいが、言語によってIDEを変えたくないから
 
-    - Positronの将来性に期待しているから
+- Positronの将来性に期待しているから
 :::
 
 ## Positronを勧める理由
