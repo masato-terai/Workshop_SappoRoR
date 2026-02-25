@@ -96,7 +96,11 @@ title-slide-attributes:
 
 - データ分析に特化した強力な AI 機能を、モダンで拡張性の高い IDE の中で使いたい人
 
+## 
+![](fig/what.png)
+
 ## RStudioとの主な違い
+::: incremental
 - Rprojがない！
 
     - フォルダ = プロジェクト
@@ -106,8 +110,10 @@ title-slide-attributes:
 - Rがクラッシュしても、Positron自体は生き残ることが多い
 
 - RやPythonのバージョンの切り替えも、コンソールの再起動だけでよい
+:::
 
 ## RStudioとの主な違い
+::: incremental
 - 現時点では、RStudioとは異なり、実行結果は、コンソールペインでしか確認できない
 
   > However, we are actively enhancing our Positron-native notebook UI that will provide inline outputs for Python or R sessions. 
@@ -119,7 +125,7 @@ title-slide-attributes:
     - qmdファイルの場合、"Preview"や"Render on Save"で書きだす
 
     - Rmdファイルの場合、"Preview"に、"Render Document With R Markdown"が表示される
-
+:::
 
 ## AI-Powered Data Science
 - PositronはRStudioに比べより多くのAIサポートを受けられる
@@ -243,6 +249,8 @@ dat <- airquality
 
 ## フィルター機能
 - RStudioに比べ、より詳細な設定が可能
+
+    - [</> Convert to Code]をクリックすると、コードを出力してくれる
 
     ![](fig/filter.png)
 
