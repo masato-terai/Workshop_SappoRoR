@@ -40,30 +40,38 @@ title-slide-attributes:
 
     - 外国語習得や言語理解に関する研究
 
+- 趣味
+
+    - 筋トレ、カードゲーム
+
 - 北海道は31年の人生で初
 
 ::: {.top-right}
-![](fig/masa.jpg){width=300px}
+![](fig/masa.jpg){width=400px height=500px}
 :::
 
 ## 私とR、Rコミュニティ
 - Rユーザー歴8年
 
-    - 半年前、RStudioからPositronへ完全移行
+    - データの下処理、統計解析
+
+    - 半年前、RStudioからPositronへ移行
 
 - Rコミュニティ
 
     - 初参加：Nagoya.R (2018)
 
+        - Tokyo.Rにオンライン参加
+
     - 初発表：Japan.R (2024)
 
 ## 想定している聴衆の方
 
-- Rをメインで使うもしくはR時々Pythonの方
+- Python < Rな方
 
-- パッケージ開発というより、データ分析などを主な用途としている方
+- パッケージ開発 < データ分析な方
 
-- Visual Studio Codeより、RStudioに慣れ親しんでいる方
+- Visual Studio Code（VS Code）< RStudioな方
 
 ## 今回の内容
 1. Positronについて
@@ -73,9 +81,9 @@ title-slide-attributes:
 # 1. Positronについて{background="#1F4E79"}
 
 ## Positronとは
-- RとPythonを"First-class"言語とするVisual Studio Codeに似ている統合開発環境
+- RとPythonを "First-class"言語とするVS Codeに似ている統合開発環境
 
-    - Posit社（RStudioを開発した）が開発中の**次世代**統合開発環境
+    - Posit社（RStudioを開発）が開発中の**次世代**統合開発環境
 
 - もう beta 版ではない
 
@@ -86,31 +94,32 @@ title-slide-attributes:
 
 
 ## こんな人にお勧めかも（by 公式）
-- VS Codeに比べ、もう少しデータ分析専用の便利機能がほしい人
+- [x] VS Codeにもう少しデータ分析専用の便利機能が欲しい
 
-- JupyterLabなどを使い続けたいが、もっと高機能で本格的な IDE を使いたい人
+- [x] **RStudioをもっと自分好みにカスタマイズしたい**
 
-- **RStudio を使っていて、IDE をもっと自分好みにカスタマイズしたり、機能を拡張したりしたい人**
+- [x] Python や R だけでなく、JavaScriptなど他言語も使ってデータ分析やパッケージ開発をしている
 
-- Python や R だけでなく、Rust、C++、JavaScript、Lua などの言語も使って日常的にデータ分析やパッケージ開発をしている人
-
-- データ分析に特化した強力な AI 機能を、モダンで拡張性の高い IDE の中で使いたい人
+- [x] データ分析に特化した強力な AI 機能を使いたい
 
 ## 
 ![](fig/what.png)
 
 ## RStudioとの主な違い
+::: incremental
 - Rprojがない！
 
     - フォルダ = プロジェクト
 
-    - 詳しい解説：[The Rproj File](https://positron.posit.co/migrate-rstudio-rproj.html)
+        - 詳しい解説：[The Rproj File](https://positron.posit.co/migrate-rstudio-rproj.html)
 
 - Rがクラッシュしても、Positron自体は生き残ることが多い
 
 - RやPythonのバージョンの切り替えも、コンソールの再起動だけでよい
+:::
 
 ## RStudioとの主な違い
+::: incremental
 - 現時点では、RStudioとは異なり、実行結果は、コンソールペインでしか確認できない
 
   > However, we are actively enhancing our Positron-native notebook UI that will provide inline outputs for Python or R sessions. 
@@ -119,12 +128,13 @@ title-slide-attributes:
 
 - RMarkdown、Quartoの書き出しが可能だが、いわゆる "Knit"ボタンがない
 
-    - qmdファイルの場合、"Preview"や"Render on Save"で書きだす
+    - qmdファイルの場合、"Preview"や "Render on Save"で書きだす
 
     - Rmdファイルの場合、"Preview"に、"Render Document With R Markdown"が表示される
+:::
 
-
-## AI-Powered Data Science
+## RStudioとの主な違い
+### AI-Powered Data Science
 - PositronはRStudioに比べより多くのAIサポートを受けられる
 
     - **Databot**機能など、ノーコードでの分析が可能に
@@ -150,7 +160,7 @@ AIサポートはPositronの推しポイントですが、個人的に使用し�
     - 多言語ならPositron
 :::
 
-# 実際に触ってみましょう{background="#1F4E79"}
+# 実際に触ってみましょう {background="#1F4E79"}
 
 ## Positronのインストール
 
@@ -528,6 +538,7 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
     - 既にRStudioをガンガン使っていて、満足しているならRStudioのままでOK!
 
 ## Positronへ乗り換えた個人的理由
+
 ::: incremental
 - わさもんだから（熊本弁：新しいもの好き）
     
@@ -536,6 +547,11 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 - Pythonをもっと習得したいが、言語によってIDEを変えたくないから
 
 - Positronの将来性に期待しているから
+
+::: {.bottom}
+![](fig/playingdog.png){width=400px height=400px} 
+:::
+
 :::
 
 ## Positronを勧める理由
