@@ -78,6 +78,15 @@ title-slide-attributes:
 
 2. Quartoについて
 
+## バージョンなど
+- Positron：2026.02.1
+    - 2026-02-17リリース版
+
+```{r}
+#| echo: true 
+R.version.string
+```
+
 # 1. Positronについて{background="#1F4E79"}
 
 ## Positronとは
@@ -106,21 +115,29 @@ title-slide-attributes:
 ![](fig/what.png)
 
 ## RStudioとの主な違い
+- .Rprojがない
+
+    - クリックすれば作業環境を復元してくれる便利なファイル
+
+- Quartoではプロジェクト ＝　ワークスペース（フォルダー）
+
+    - VS Codeよりになった
+
+- 詳しい解説：[The Rproj File](https://positron.posit.co/migrate-rstudio-rproj.html)
+
+::: {.callout-note}
+[RStudioのプロジェクト機能に関してはこちらを参考にしてみてください](https://masato-terai.github.io/reproducible-research-with-Rmd/)
+
+- プロジェクト機能やR Markdown、renvパッケージで研究の再現性を上げる方法のチュートリアルです。
+:::
+
+## その他のRStudioとの主な違い
 ::: incremental
-- Rprojがない！
-
-    - フォルダ = プロジェクト
-
-        - 詳しい解説：[The Rproj File](https://positron.posit.co/migrate-rstudio-rproj.html)
-
 - Rがクラッシュしても、Positron自体は生き残ることが多い
 
 - RやPythonのバージョンの切り替えも、コンソールの再起動だけでよい
-:::
 
-## RStudioとの主な違い
-::: incremental
-- 現時点では、RStudioとは異なり、実行結果は、コンソールペインでしか確認できない
+- RStudioとは異なり、実行結果は、コンソールペインでしか確認できない
 
   > However, we are actively enhancing our Positron-native notebook UI that will provide inline outputs for Python or R sessions. 
   >
@@ -346,45 +363,26 @@ boxplot(dat$mpg, dat$cyl)
 
 ![Pic From indent-rainbow](https://raw.githubusercontent.com/oderwat/vscode-indent-rainbow/master/assets/example.png)
 
+## Positronのアップデート
+
+- [⚙] をクリックした一番下に表示
+
+    - [Restart to update]をクリックすると警告無しでアップデートされます
 
 # 2.Quartoについて{background="#1F4E79"}
 
 ## 概要
 - Pandocを基盤にした研究・技術文書作成のための出版システム
 
-- Rに依存しない
+    - Rに依存しない、多言語対応のR Markdown
 
-    - R -> R Markdown
+- Quartoでもウェブサイトをつくったり、本をつくることは可能
 
-    - Python -> R Markdown = Rの追加インストール
+    - [R MarkdownとQuartoの比較](https://quarto.org/docs/faq/rmarkdown.html#quarto-sounds-similar-to-r-markdown.-what-is-the-difference-and-why-create-a-new-project)
 
-    - R -> Jupyter = Pythonの追加インストール
-
-    - R & Python -> Quarto
+        - e.g., bookdown = Quarto Books
 
 ## {background-image="fig/rmdqmd.png" background-size="600px"  background-repeat="no-repeat"}
-
-## R Markdownとの違い
-
-- 様々なプログラム言語に対応（e.g., R、Python、Julia）
-
-    - QuartoはRStudio外でも使いやすい
-
-- Quartoは単体のツール
-
-    - R Markdownでは、distill -> website、bookdown -> 本, revealjs -> スライド
-
-    - Quartoは以上を一つにまとめている
-
-        - 長期的にパッケージ管理がしやすい
-
-
-## R Markdownとの違い
-- PositronとQuarto、RStudioとR Markdown
-
-    - R MarkdownはRStudio内で完結するのが快適（Pythonが使えないわけではない）
-    
-    - QuartoはVSコードやJupyter、PositronでもOK!
 
 ## R Markdownの今後
 
@@ -531,7 +529,7 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 ### 個人的にはお勧めだが、必須ではない 
 - RStudioが消えるわけではない（開発が止まったりするわけではない）
     
-    - Positronよりも、RStudio（10年以上の歴史）の方がより安定したソフトウェア
+    - Positronよりも、RStudio（10年以上の歴史）の方がより安定したソフトウェア（β版の公開は2011年）
 
 - R, RStudioにこれから触れる人は、Positronがお勧めらしい
 
@@ -547,11 +545,6 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
 - Pythonをもっと習得したいが、言語によってIDEを変えたくないから
 
 - Positronの将来性に期待しているから
-
-::: {.bottom}
-![](fig/playingdog.png){width=400px height=400px} 
-:::
-
 :::
 
 ## Positronを勧める理由
@@ -624,3 +617,7 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
     - [https://note.com/mitti1210/n/nb41e77d49f51](https://note.com/mitti1210/n/nb41e77d49f51)
 
 # スライドの最後です{background="#1F4E79"}
+
+::: {.bottom}
+![](fig/playingdog.png){width=400px height=400px} 
+:::
