@@ -40,10 +40,6 @@ title-slide-attributes:
 
     - 外国語習得や言語理解に関する研究
 
-- 趣味
-
-    - 筋トレ、カードゲーム
-
 - 北海道は31年の人生で初
 
 ::: {.top-right}
@@ -77,6 +73,8 @@ title-slide-attributes:
 1. Positronについて
 
 2. Quartoについて
+
+![](fig/playingdog.png){width=400px height=400px} 
 
 ## バージョンなど
 - Positron：2026.02.1
@@ -617,7 +615,3 @@ TERMINALでRenderすることも可能ですが、YAMLでengineを定義して�
     - [https://note.com/mitti1210/n/nb41e77d49f51](https://note.com/mitti1210/n/nb41e77d49f51)
 
 # スライドの最後です{background="#1F4E79"}
-
-::: {.bottom}
-![](fig/playingdog.png){width=400px height=400px} 
-:::
