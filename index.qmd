@@ -117,7 +117,7 @@ R.version.string
 
     - クリックすれば作業環境を復元してくれる便利なファイル
 
-- Quartoではプロジェクト ＝　ワークスペース（フォルダー）
+- Positronではプロジェクト ＝ ワークスペース（フォルダー）
 
     - VS Codeよりになった
 
@@ -142,13 +142,9 @@ R.version.string
   > — [Frequently Asked Questions](https://positron.posit.co/faqs.html)
 
 - RMarkdown、Quartoの書き出しが可能だが、いわゆる "Knit"ボタンがない
-
-    - qmdファイルの場合、"Preview"や "Render on Save"で書きだす
-
-    - Rmdファイルの場合、"Preview"に、"Render Document With R Markdown"が表示される
 :::
 
-## RStudioとの主な違い
+## その他のRStudioとの主な違い
 ### AI-Powered Data Science
 - PositronはRStudioに比べより多くのAIサポートを受けられる
 
@@ -159,6 +155,9 @@ AIサポートはPositronの推しポイントですが、個人的に使用し�
 
 - [公式Youtube（英語）：https://youtu.be/TrN-FMcOsOA?si=2YYNA2_Lv35QXwyD](https://youtu.be/TrN-FMcOsOA?si=2YYNA2_Lv35QXwyD)
 :::
+
+And More!
+
 
 ## つまり
 ::: incremental
@@ -380,7 +379,7 @@ boxplot(dat$mpg, dat$cyl)
 
         - e.g., bookdown = Quarto Books
 
-## {background-image="fig/rmdqmd.png" background-size="600px"  background-repeat="no-repeat"}
+## {background-image="fig/rmdqmd.png" background-repeat="no-repeat"}
 
 ## R Markdownの今後
 
